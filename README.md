@@ -161,7 +161,7 @@ const Component = ({ /* Props are loaded in this object */ }) => {
 }
 ```
 
-Components can be used anywhere, simply call them with the `Components` function and provide them with props and
+Components can be used anywhere, simply call them with the `Component` function and provide them with props and
 children.
 
 ```js
@@ -174,7 +174,7 @@ Modal(
 );
 ```
 
-Components can access children as well as parameters through their props if provided.
+Components can access their children through their props if provided.
 
 ```js
 import { Modal, Action, Component } from '@instantish/blokus';
@@ -183,7 +183,7 @@ const SomeModal = ({ children }) => {
   return Modal({}, children);
 }
 
-Component({}, SomeModal, Action()); // The action block will in the children's array
+Component({}, SomeModal, Action()); // The action block will be in the children's array
 ```
 
 ## API
