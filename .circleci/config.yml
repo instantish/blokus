@@ -1,0 +1,22 @@
+version: 2 # use CircleCI 2.0
+jobs:
+  build:
+    docker:
+      - image: circleci/node:12.19.0
+    steps:
+      - checkout
+      - run:
+          name: Run NPM install
+          command: npm install
+      - run:
+          name: Run linter
+          command: npm run lint
+      - run:
+          name: Try building the library
+          command: npm run build
+      - run:
+          name: Run tests
+          command: npm run test:coverage
+      - run:
+          name: Upload coverage to codecov
+          command: bash <(curl -s https://codecov.io/bash)
