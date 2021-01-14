@@ -1,0 +1,23 @@
+# Misc
+.sass-cache
+.eslintcache
+.cache
+npm-debug.log*
+.idea
+.parcel-cache
+
+# Compiled output
+dist
+build
+
+# Node modules
+node_modules
+
+# Rollup config
+!rollup.config.js
+
+# Coverage output
+coverage
+
+# OSX files
+.DS_Store
