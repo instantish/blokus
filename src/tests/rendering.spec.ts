@@ -11,7 +11,7 @@ import {
   Divider,
   ExternalMultiSelect,
   ExternalSelect,
-  /* File, */
+  File,
   Filter,
   Header,
   HomeTab,
@@ -19,6 +19,7 @@ import {
   ImageElement,
   Input,
   Markdown,
+  Message,
   Modal,
   Option,
   OptionGroup,
@@ -94,11 +95,6 @@ describe('Rendering blocks', () => {
       ]
     ),
     Divider({ blockId: sample }),
-    /* File({
-      source: 'remote',
-      externalId: sample,
-      blockId: sample,
-    }), */
     Action(
       {
         blockId: sample,
@@ -301,7 +297,6 @@ describe('Rendering blocks', () => {
       ],
     },
     { type: 'divider', block_id: sample },
-    /* { type: 'file', block_id: sample, external_id: sample, source: 'remote' }, */
     {
       type: 'action',
       block_id: sample,
@@ -765,6 +760,42 @@ describe('Rendering blocks', () => {
         private_metadata: sample,
         callback_id: sample,
         external_id: sample,
+      });
+    });
+  });
+
+  describe('Using the Message view', () => {
+    it('will render an empty message if given no children', async () => {
+      const messageView = Message({
+        text: sample,
+      });
+
+      const result = await render(messageView);
+
+      expect(result).toEqual({
+        text: sample,
+        blocks: [],
+      });
+    });
+
+    it('will render a message with a file element as expected', async () => {
+      const messageView = Message(
+        {
+          text: sample,
+        },
+
+        File({
+          source: 'remote',
+          externalId: sample,
+          blockId: sample,
+        })
+      );
+
+      const result = await render(messageView);
+
+      expect(result).toEqual({
+        text: sample,
+        blocks: [{ type: 'file', block_id: sample, external_id: sample, source: 'remote' }],
       });
     });
   });

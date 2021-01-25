@@ -5,7 +5,7 @@ import {
   BlockOrGenerator,
   PlainTextObject,
   ActionElement,
-  PresentationalBlock,
+  ViewBlocks,
   BlocksOrGenerators,
   ImageElementBlock,
   TextObject,
@@ -18,6 +18,10 @@ import {
   FilterObject,
   DispatchActionConfigObject,
   Block,
+  MessageBlock,
+  ModalView,
+  HomeTabView,
+  MessageView,
 } from './types';
 import {
   ActionElementPayload,
@@ -31,12 +35,16 @@ import {
   OptionGroupObjectPayload,
   OptionObjectPayload,
   PlainTextObjectPayload,
-  PresentationalBlockPayload,
+  ViewBlockPayload,
   TextObjectPayload,
   ViewPayload,
+  MessageBlockPayload,
+  ModalPayload,
+  HomeTabPayload,
+  MessagePayload,
 } from './outputTypes';
 import { BlockTypes } from './contants';
-import { validateHome, validateModal } from './validation';
+import { validateHome, validateModal, validateMessage } from './validation';
 
 const executeComponent = async <O>(component: ComponentBlock<Props, O>): Promise<O | O[]> => {
   return component.type({
@@ -476,7 +484,9 @@ const handleActionElement = async (element: ActionElement): Promise<ActionElemen
   return (await handleElement(element as ElementBlock)) as ActionElementPayload;
 };
 
-const handlePresentationalBlock = async (block: PresentationalBlock): Promise<PresentationalBlockPayload> => {
+const handlePresentationalBlock = async (
+  block: ViewBlocks | MessageBlock
+): Promise<ViewBlockPayload | MessageBlockPayload> => {
   switch (block.type) {
     case BlockTypes.action: {
       const elements = await handleChildren<ActionElement, ActionElementPayload>(block.elements, handleActionElement);
@@ -568,38 +578,49 @@ const handlePresentationalBlock = async (block: PresentationalBlock): Promise<Pr
 };
 
 export const render = async (view: View): Promise<ViewPayload> => {
-  const blocks = await handleChildren<PresentationalBlock, PresentationalBlockPayload>(
-    view.blocks,
+  const blocks = await handleChildren<ViewBlocks | MessageBlock, ViewBlockPayload | MessageBlockPayload>(
+    view.blocks || [],
     handlePresentationalBlock
   );
 
   if (view.type === BlockTypes.modal) {
-    const payload = {
+    const converted = view as ModalView;
+    const payload: ModalPayload = {
       type: view.type,
-      title: await handleDefinedSingleChild<PlainTextObject, PlainTextObjectPayload>(view.title, handlePlainText),
-      blocks,
-      close: await handleSingleChild<PlainTextObject, PlainTextObjectPayload>(view.close, handlePlainText),
-      submit: await handleSingleChild<PlainTextObject, PlainTextObjectPayload>(view.submit, handlePlainText),
-      private_metadata: view.privateMetadata,
-      callback_id: view.callbackId,
-      clear_on_close: view.clearOnClose,
-      notify_on_close: view.notifyOnClose,
-      external_id: view.externalId,
-      submit_disabled: view.submitDisabled,
+      title: await handleDefinedSingleChild<PlainTextObject, PlainTextObjectPayload>(converted.title, handlePlainText),
+      blocks: (blocks as unknown) as ViewBlockPayload[],
+      close: await handleSingleChild<PlainTextObject, PlainTextObjectPayload>(converted.close, handlePlainText),
+      submit: await handleSingleChild<PlainTextObject, PlainTextObjectPayload>(converted.submit, handlePlainText),
+      private_metadata: converted.privateMetadata,
+      callback_id: converted.callbackId,
+      clear_on_close: converted.clearOnClose,
+      notify_on_close: converted.notifyOnClose,
+      external_id: converted.externalId,
+      submit_disabled: converted.submitDisabled,
     };
     validateModal(payload);
     return payload;
   } else if (view.type === BlockTypes.home) {
-    const payload = {
+    const converted = view as HomeTabView;
+    const payload: HomeTabPayload = {
       type: view.type,
-      blocks,
-      private_metadata: view.privateMetadata,
-      callback_id: view.callbackId,
-      external_id: view.externalId,
+      blocks: (blocks as unknown) as ViewBlockPayload[],
+      private_metadata: converted.privateMetadata,
+      callback_id: converted.callbackId,
+      external_id: converted.externalId,
     };
     validateHome(payload);
     return payload;
+  } else if (view.type === BlockTypes.message) {
+    const converted = view as MessageView;
+    const payload: MessagePayload = {
+      blocks: view.blocks ? ((blocks as unknown) as MessageBlockPayload[]) : undefined,
+      text: converted.text,
+      thread_ts: converted.threadTS,
+      mrkdwn: converted.mrkdwn,
+    };
+    validateMessage(payload);
+    return payload;
   }
-  // TODO: Add validations
   throw new Error('Unknown view type provided');
 };

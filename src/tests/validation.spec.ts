@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-types */
 
-import { validateHome, validateModal } from '../validation';
+import { validateHome, validateMessage, validateModal } from '../validation';
 import {
   actionBlockLimits,
   blockLimits,
@@ -11,6 +11,7 @@ import {
   contextBlockLimits,
   datepickerElementLimits,
   dispatchActionConfigObjectLimits,
+  fileBlockLimits,
   filterObjectLimits,
   headerBlockLimits,
   homeLimits,
@@ -18,6 +19,7 @@ import {
   imageElementLimits,
   inputBlockLimits,
   interactiveElementsLimits,
+  messageLimits,
   modalLimits,
   optionGroupObjectLimits,
   optionObjectLimits,
@@ -573,6 +575,35 @@ describe('validating individual blocks', () => {
       }),
       blockLimits.blockIdLength
     ),
+    [
+      'missing required properties in message',
+      {
+        type: BlockTypes.message,
+      },
+      requiredError('message', messageLimits.required),
+    ],
+    [
+      'too many blocks in message',
+      {
+        type: BlockTypes.message,
+        blocks: generateCopies(messageLimits.blocksLength + 1),
+        text: '',
+      },
+      maxLengthError('message.blocks', messageLimits.blocksLength),
+    ],
+    [
+      'block of wrong type in message',
+      {
+        type: BlockTypes.message,
+        blocks: [
+          {
+            type: 'invalid',
+          },
+        ],
+        text: '',
+      },
+      oneOfTypeError('message.blocks[0]', messageLimits.blockTypes, 'invalid'),
+    ],
     ...generateTypedTextTests(
       'section',
       'home.blocks[0]',
@@ -1892,33 +1923,34 @@ describe('validating individual blocks', () => {
       },
       new Error(`Expected home.blocks[0].elements[0] of type ${BlockTypes.mrkdwn} to not have the property emoji.`),
     ],
-    /* TODO: Renable when we support messages
     [
       'missing required properties in file',
       {
-        type: BlockTypes.home,
+        type: BlockTypes.message,
+        text: '',
         blocks: [
           {
             type: BlockTypes.file,
           },
         ],
       },
-      requiredError('home.blocks[0]', fileBlockLimits.required),
+      requiredError('message.blocks[0]', fileBlockLimits.required),
     ],
     [
-      "wrong option for style in file's source type",
+      "wrong option for style in file's source",
       {
-        type: BlockTypes.home,
+        type: BlockTypes.message,
+        text: '',
         blocks: [
           {
             type: BlockTypes.file,
-            source_type: 'invalid',
+            external_id: '',
+            source: 'invalid',
           },
         ],
       },
-      optionError('home.blocks[0].source_type', fileBlockLimits.sourceType, 'invalid'),
+      optionError('message.blocks[0].source', fileBlockLimits.sourceType, 'invalid'),
     ],
-     */
     [
       'missing required properties in header',
       {
@@ -2027,17 +2059,20 @@ describe('validating individual blocks', () => {
   test.each(cases)('%s', (_, block, expected) => {
     const converted = block as { type: string };
 
+    // We are using ts-ignore since we are purposefully having invalid objects
+    /* eslint-disable @typescript-eslint/ban-ts-comment */
     expect(() => {
-      // We are using ts-ignore since we are purposefully having invalid objects
       if (converted.type === BlockTypes.modal) {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         validateModal(block);
-      } else {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      } else if (converted.type === BlockTypes.home) {
         // @ts-ignore
         validateHome(block);
+      } else {
+        // @ts-ignore
+        validateMessage(block);
       }
     }).toThrowError(expected);
+    /* eslint-enable @typescript-eslint/ban-ts-comment */
   });
 });

@@ -61,14 +61,22 @@ export interface SectionBlockPayload extends BlockPayload {
   accessory?: ElementBlockPayload;
 }
 
-export type PresentationalBlockPayload =
+export type ViewBlockPayload =
   | ActionBlockPayload
   | ContextBlockPayload
   | DividerBlockPayload
-  | FileBlockPayload
   | HeaderBlockPayload
   | ImageBlockPayload
   | InputBlockPayload
+  | SectionBlockPayload;
+
+export type MessageBlockPayload =
+  | ActionBlockPayload
+  | ContextBlockPayload
+  | DividerBlockPayload
+  | HeaderBlockPayload
+  | ImageBlockPayload
+  | FileBlockPayload
   | SectionBlockPayload;
 
 export interface InteractiveElementPayload extends BlockPayload {
@@ -315,7 +323,7 @@ export type CompositionObjectPayloads =
 export interface ModalPayload extends BlockPayload {
   type: BlockTypes.modal;
   title: PlainTextObjectPayload;
-  blocks: PresentationalBlockPayload[];
+  blocks: ViewBlockPayload[];
   close?: PlainTextObjectPayload;
   submit?: PlainTextObjectPayload;
   private_metadata?: string;
@@ -328,10 +336,17 @@ export interface ModalPayload extends BlockPayload {
 
 export interface HomeTabPayload extends BlockPayload {
   type: BlockTypes.home;
-  blocks: PresentationalBlockPayload[];
+  blocks: ViewBlockPayload[];
   private_metadata?: string;
   callback_id?: string;
   external_id?: string;
 }
 
-export type ViewPayload = ModalPayload | HomeTabPayload;
+export interface MessagePayload {
+  text: string;
+  blocks?: MessageBlockPayload[];
+  thread_ts?: string;
+  mrkdwn?: boolean;
+}
+
+export type ViewPayload = ModalPayload | HomeTabPayload | MessagePayload;

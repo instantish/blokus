@@ -80,14 +80,22 @@ export interface SectionBlock extends Block {
   accessory?: BlockOrGenerator<ElementBlock>;
 }
 
-export type PresentationalBlock =
+export type ViewBlocks =
   | ActionBlock
   | ContextBlock
   | DividerBlock
-  | FileBlock
   | HeaderBlock
   | ImageBlock
   | InputBlock
+  | SectionBlock;
+
+export type MessageBlock =
+  | ActionBlock
+  | ContextBlock
+  | DividerBlock
+  | HeaderBlock
+  | ImageBlock
+  | FileBlock
   | SectionBlock;
 
 interface InteractiveElementBlock extends Block {
@@ -338,10 +346,10 @@ export type CompositionObjects =
   | DispatchActionConfigObject
   | FilterObject;
 
-export interface ModalBlock extends Block {
+export interface ModalView extends Block {
   type: BlockTypes.modal;
   title: BlockOrGenerator<PlainTextObject>;
-  blocks: BlocksOrGenerators<PresentationalBlock>;
+  blocks: BlocksOrGenerators<ViewBlocks>;
   close?: BlockOrGenerator<PlainTextObject>;
   submit?: BlockOrGenerator<PlainTextObject>;
   privateMetadata?: string;
@@ -352,12 +360,20 @@ export interface ModalBlock extends Block {
   submitDisabled?: boolean;
 }
 
-export interface HomeTabBlock extends Block {
+export interface HomeTabView extends Block {
   type: BlockTypes.home;
-  blocks: BlocksOrGenerators<PresentationalBlock>;
+  blocks: BlocksOrGenerators<ViewBlocks>;
   privateMetadata?: string;
   callbackId?: string;
   externalId?: string;
 }
 
-export type View = ModalBlock | HomeTabBlock;
+export interface MessageView extends Block {
+  type: BlockTypes.message;
+  text: string;
+  blocks?: BlocksOrGenerators<MessageBlock>;
+  threadTS?: string;
+  mrkdwn?: boolean;
+}
+
+export type View = ModalView | HomeTabView | MessageView;

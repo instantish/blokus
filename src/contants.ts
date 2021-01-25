@@ -34,6 +34,7 @@ export enum BlockTypes {
   filter = 'filter',
   modal = 'modal',
   home = 'home',
+  message = 'message',
 }
 
 export const blockLimits = {
@@ -312,4 +313,18 @@ export const homeLimits = {
     BlockTypes.section,
   ],
   required: ['blocks'],
+};
+
+export const messageLimits = {
+  blocksLength: 50,
+  blockTypes: [
+    BlockTypes.action,
+    BlockTypes.context,
+    BlockTypes.divider,
+    BlockTypes.header,
+    BlockTypes.image,
+    BlockTypes.file,
+    BlockTypes.section,
+  ],
+  required: ['text'],
 };

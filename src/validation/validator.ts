@@ -16,6 +16,7 @@ import {
   imageElementLimits,
   inputBlockLimits,
   interactiveElementsLimits,
+  messageLimits,
   modalLimits,
   multiSelectMenuElementLimits,
   optionGroupObjectLimits,
@@ -58,7 +59,7 @@ import {
   OptionObjectPayload,
   OverflowMenuElementPayload,
   PlainTextInputElementPayload,
-  PresentationalBlockPayload,
+  ViewBlockPayload,
   PublicChannelsMultiSelectMenuElementPayload,
   PublicChannelsSelectMenuElementPayload,
   RadioButtonGroupElementPayload,
@@ -70,6 +71,8 @@ import {
   TimepickerElementPayload,
   UserMultiSelectMenuElementPayload,
   UserSelectMenuElementPayload,
+  MessagePayload,
+  MessageBlockPayload,
 } from '../outputTypes';
 import {
   validateMaxLength,
@@ -480,7 +483,7 @@ const validateStaticMultiSelect = (block: StaticMultiSelectMenuElementPayload, p
   }
 };
 
-const validatePresentationalBlock = (block: PresentationalBlockPayload, path: string): void => {
+const validatePresentationalBlock = (block: ViewBlockPayload | MessageBlockPayload, path: string): void => {
   if (block.block_id) {
     validateMaxLength(block.block_id, blockLimits.blockIdLength, `${path}.block_id`);
   }
@@ -791,5 +794,18 @@ export const validateModal = (block: ModalPayload): void => {
   // callback_id
   if (block.callback_id) {
     validateMaxLength(block.callback_id, homeLimits.callbackIdLength, `${path}.callback_id`);
+  }
+};
+
+export const validateMessage = (block: MessagePayload): void => {
+  const path = 'message';
+  validateRequired(Object.keys(block), messageLimits.required, path);
+
+  if (block.blocks) {
+    validateMaxLength(block.blocks, messageLimits.blocksLength, `${path}.blocks`);
+    block.blocks.forEach((element, number) => {
+      validateOneOfType(element.type, messageLimits.blockTypes, `${path}.blocks[${number}]`);
+      validateBlockRecursive(element, `${path}.blocks[${number}]`);
+    });
   }
 };
