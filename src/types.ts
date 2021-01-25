@@ -51,7 +51,7 @@ export interface FileBlock extends Block {
 export interface HeaderBlock extends Block {
   type: BlockTypes.header;
   blockId?: string;
-  text: string;
+  text: BlockOrGenerator<PlainTextObject>;
 }
 
 export interface ImageBlock extends Block {
@@ -120,7 +120,7 @@ export interface DatepickerElement extends InteractiveElementBlock {
 export interface ImageElementBlock extends Block {
   type: BlockTypes.image;
   imageUrl: string;
-  atlText?: string;
+  altText?: string;
 }
 
 export interface StaticMultiSelectMenuElement extends InteractiveElementBlock {

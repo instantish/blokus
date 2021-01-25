@@ -198,7 +198,8 @@ TODO
 - [ ] Write the API section for all blocks
 - [ ] Add details for the TypeScript types
 - [ ] Add JSX support
-- [ ] Add advanced validations to checks things like text length or minimums and maximums.
+- [X] Add advanced validations to checks things like text length or minimums and maximums.
+- [ ] Support messages as a view type.
 
 ## Development
 Install all dependencies:

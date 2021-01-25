@@ -36,6 +36,7 @@ import {
   ViewPayload,
 } from './outputTypes';
 import { BlockTypes } from './contants';
+import { validateHome, validateModal } from './validation';
 
 const executeComponent = async <O>(component: ComponentBlock<Props, O>): Promise<O | O[]> => {
   return component.type({
@@ -226,7 +227,7 @@ const handleElement = async (element: ElementBlock): Promise<ElementBlockPayload
     case BlockTypes.image:
       return {
         type: element.type,
-        atl_text: element.atlText,
+        alt_text: element.altText,
         image_url: element.imageUrl,
       };
     case BlockTypes.button:
@@ -496,7 +497,7 @@ const handlePresentationalBlock = async (block: PresentationalBlock): Promise<Pr
                 (el: ImageElementBlock): ImageElementPayload => ({
                   type: el.type,
                   image_url: el.imageUrl,
-                  atl_text: el.atlText,
+                  alt_text: el.altText,
                 })
               );
             }
@@ -531,7 +532,7 @@ const handlePresentationalBlock = async (block: PresentationalBlock): Promise<Pr
       return {
         type: block.type,
         block_id: block.blockId,
-        text: block.text,
+        text: await handleDefinedSingleChild<PlainTextObject, PlainTextObjectPayload>(block.text, handlePlainText),
       };
     case BlockTypes.image:
       return {
@@ -573,7 +574,7 @@ export const render = async (view: View): Promise<ViewPayload> => {
   );
 
   if (view.type === BlockTypes.modal) {
-    return {
+    const payload = {
       type: view.type,
       title: await handleDefinedSingleChild<PlainTextObject, PlainTextObjectPayload>(view.title, handlePlainText),
       blocks,
@@ -586,14 +587,18 @@ export const render = async (view: View): Promise<ViewPayload> => {
       external_id: view.externalId,
       submit_disabled: view.submitDisabled,
     };
+    validateModal(payload);
+    return payload;
   } else if (view.type === BlockTypes.home) {
-    return {
+    const payload = {
       type: view.type,
       blocks,
       private_metadata: view.privateMetadata,
       callback_id: view.callbackId,
       external_id: view.externalId,
     };
+    validateHome(payload);
+    return payload;
   }
   // TODO: Add validations
   throw new Error('Unknown view type provided');

@@ -14,6 +14,7 @@ import {
   BlocksOrGenerators,
   BlockOrGenerator,
   PartialBy,
+  PlainTextObject,
 } from '../types';
 import { BlockTypes } from '../contants';
 import { Text } from './objectsFactories';
@@ -54,8 +55,12 @@ export const File = (params: Omit<FileBlock, 'type'>): FileBlock => ({
   ...params,
 });
 
-export const Header = (params: Omit<HeaderBlock, 'type'>): HeaderBlock => ({
+export const Header = (
+  params: PartialBy<Omit<HeaderBlock, 'type'>, 'text'>,
+  text: BlockOrGenerator<PlainTextObject | string>
+): HeaderBlock => ({
   type: BlockTypes.header,
+  text: typeof text === 'string' ? Text({ text }) : (text as BlockOrGenerator<PlainTextObject>),
   ...params,
 });
 

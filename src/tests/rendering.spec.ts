@@ -11,7 +11,7 @@ import {
   Divider,
   ExternalMultiSelect,
   ExternalSelect,
-  File,
+  /* File, */
   Filter,
   Header,
   HomeTab,
@@ -71,10 +71,12 @@ describe('Rendering blocks', () => {
   });
 
   const blocks = [
-    Header({
-      text: sample,
-      blockId: sample,
-    }),
+    Header(
+      {
+        blockId: sample,
+      },
+      sample
+    ),
     Image({
       title: sampleText,
       imageUrl: sample,
@@ -88,15 +90,15 @@ describe('Rendering blocks', () => {
       [
         Text({ emoji: sample }, sample),
         Markdown({ verbatim: sample }, sample),
-        ImageElement({ atlText: sample, imageUrl: sample }),
+        ImageElement({ altText: sample, imageUrl: sample }),
       ]
     ),
     Divider({ blockId: sample }),
-    File({
+    /* File({
       source: 'remote',
       externalId: sample,
       blockId: sample,
-    }),
+    }), */
     Action(
       {
         blockId: sample,
@@ -142,6 +144,13 @@ describe('Rendering blocks', () => {
           confirm: sampleConfirm,
           placeholder: sampleText,
         }),
+      ]
+    ),
+    Action(
+      {
+        blockId: sample,
+      },
+      [
         PublicChannelsSelect({
           actionId: sample,
           initialChannel: sample,
@@ -178,6 +187,13 @@ describe('Rendering blocks', () => {
           confirm: sampleConfirm,
           placeholder: sampleText,
         }),
+      ]
+    ),
+    Action(
+      {
+        blockId: sample,
+      },
+      [
         PublicChannelsMultiSelect({
           actionId: sample,
           initialChannels: [sample],
@@ -193,7 +209,7 @@ describe('Rendering blocks', () => {
         ),
         Datepicker({
           actionId: sample,
-          initialDate: sample,
+          initialDate: '00-00-0000',
           confirm: sampleConfirm,
           placeholder: sampleText,
         }),
@@ -203,7 +219,7 @@ describe('Rendering blocks', () => {
       {
         accessory: Timepicker({
           actionId: sample,
-          initialTime: sample,
+          initialTime: '00:00',
           confirm: sampleConfirm,
           placeholder: sampleText,
         }),
@@ -267,7 +283,7 @@ describe('Rendering blocks', () => {
   ];
 
   const expectedBlocks = [
-    { type: 'header', block_id: sample, text: sample },
+    { type: 'header', block_id: sample, text: { type: 'plain_text', text: sample } },
     {
       type: 'image',
       block_id: sample,
@@ -281,11 +297,11 @@ describe('Rendering blocks', () => {
       elements: [
         { type: 'plain_text', text: sample, emoji: sample },
         { type: 'mrkdwn', text: sample, verbatim: sample },
-        { type: 'image', image_url: sample, atl_text: sample },
+        { type: 'image', image_url: sample, alt_text: sample },
       ],
     },
     { type: 'divider', block_id: sample },
-    { type: 'file', block_id: sample, external_id: sample, source: 'remote' },
+    /* { type: 'file', block_id: sample, external_id: sample, source: 'remote' }, */
     {
       type: 'action',
       block_id: sample,
@@ -383,6 +399,12 @@ describe('Rendering blocks', () => {
             deny: { type: 'plain_text', text: sample },
           },
         },
+      ],
+    },
+    {
+      type: 'action',
+      block_id: sample,
+      elements: [
         {
           type: 'channels_select',
           action_id: sample,
@@ -478,6 +500,12 @@ describe('Rendering blocks', () => {
             deny: { type: 'plain_text', text: sample },
           },
         },
+      ],
+    },
+    {
+      type: 'action',
+      block_id: sample,
+      elements: [
         {
           type: 'multi_channels_select',
           action_id: sample,
@@ -513,7 +541,7 @@ describe('Rendering blocks', () => {
         {
           type: 'datepicker',
           action_id: sample,
-          initial_date: sample,
+          initial_date: '00-00-0000',
           placeholder: { type: 'plain_text', text: sample },
           confirm: {
             text: { type: 'plain_text', text: sample },
@@ -532,7 +560,7 @@ describe('Rendering blocks', () => {
       accessory: {
         type: 'timepicker',
         action_id: sample,
-        initial_time: sample,
+        initial_time: '00:00',
         placeholder: { type: 'plain_text', text: sample },
         confirm: {
           text: { type: 'plain_text', text: sample },

@@ -32,7 +32,7 @@ export interface FileBlockPayload extends BlockPayload {
 export interface HeaderBlockPayload extends BlockPayload {
   type: BlockTypes.header;
   block_id?: string;
-  text: string;
+  text: PlainTextObjectPayload;
 }
 
 export interface ImageBlockPayload extends BlockPayload {
@@ -71,11 +71,11 @@ export type PresentationalBlockPayload =
   | InputBlockPayload
   | SectionBlockPayload;
 
-interface InteractiveElementPayloadBlockPayload extends BlockPayload {
+export interface InteractiveElementPayload extends BlockPayload {
   action_id: string;
 }
 
-export interface ButtonElementPayload extends InteractiveElementPayloadBlockPayload {
+export interface ButtonElementPayload extends InteractiveElementPayload {
   type: BlockTypes.button;
   text: PlainTextObjectPayload;
   url?: string;
@@ -84,14 +84,14 @@ export interface ButtonElementPayload extends InteractiveElementPayloadBlockPayl
   confirm?: ConfirmObjectPayload;
 }
 
-export interface CheckboxGroupElementPayload extends InteractiveElementPayloadBlockPayload {
+export interface CheckboxGroupElementPayload extends InteractiveElementPayload {
   type: BlockTypes.checkboxes;
   options: OptionObjectPayload[];
   initial_options?: OptionObjectPayload[];
   confirm?: ConfirmObjectPayload;
 }
 
-export interface DatepickerElementPayload extends InteractiveElementPayloadBlockPayload {
+export interface DatepickerElementPayload extends InteractiveElementPayload {
   type: BlockTypes.datepicker;
   placeholder?: TextObjectPayload;
   initial_date?: string;
@@ -101,10 +101,10 @@ export interface DatepickerElementPayload extends InteractiveElementPayloadBlock
 export interface ImageElementPayload extends BlockPayload {
   type: BlockTypes.image;
   image_url: string;
-  atl_text?: string;
+  alt_text?: string;
 }
 
-export interface StaticMultiSelectMenuElementPayload extends InteractiveElementPayloadBlockPayload {
+export interface StaticMultiSelectMenuElementPayload extends InteractiveElementPayload {
   type: BlockTypes.multiStaticSelect;
   placeholder?: PlainTextObjectPayload;
   options?: OptionObjectPayload[];
@@ -114,7 +114,7 @@ export interface StaticMultiSelectMenuElementPayload extends InteractiveElementP
   max_selected_items?: number;
 }
 
-export interface ExternalMultiSelectMenuElementPayload extends InteractiveElementPayloadBlockPayload {
+export interface ExternalMultiSelectMenuElementPayload extends InteractiveElementPayload {
   type: BlockTypes.multiExternalSelect;
   placeholder?: PlainTextObjectPayload;
   min_query_length?: number;
@@ -123,7 +123,7 @@ export interface ExternalMultiSelectMenuElementPayload extends InteractiveElemen
   max_selected_items?: number;
 }
 
-export interface UserMultiSelectMenuElementPayload extends InteractiveElementPayloadBlockPayload {
+export interface UserMultiSelectMenuElementPayload extends InteractiveElementPayload {
   type: BlockTypes.multiUsersSelect;
   placeholder?: PlainTextObjectPayload;
   initial_users?: string[];
@@ -131,7 +131,7 @@ export interface UserMultiSelectMenuElementPayload extends InteractiveElementPay
   max_selected_items?: number;
 }
 
-export interface ConversationMultiSelectMenuElementPayload extends InteractiveElementPayloadBlockPayload {
+export interface ConversationMultiSelectMenuElementPayload extends InteractiveElementPayload {
   type: BlockTypes.multiConversationsSelect;
   placeholder?: PlainTextObjectPayload;
   initial_conversations?: string[];
@@ -141,7 +141,7 @@ export interface ConversationMultiSelectMenuElementPayload extends InteractiveEl
   filter?: FilterObjectPayload;
 }
 
-export interface PublicChannelsMultiSelectMenuElementPayload extends InteractiveElementPayloadBlockPayload {
+export interface PublicChannelsMultiSelectMenuElementPayload extends InteractiveElementPayload {
   type: BlockTypes.multiChannelsSelect;
   placeholder?: PlainTextObjectPayload;
   initial_channels?: string[];
@@ -156,13 +156,13 @@ export type MultiSelectElementPayload =
   | ConversationMultiSelectMenuElementPayload
   | PublicChannelsMultiSelectMenuElementPayload;
 
-export interface OverflowMenuElementPayload extends InteractiveElementPayloadBlockPayload {
+export interface OverflowMenuElementPayload extends InteractiveElementPayload {
   type: BlockTypes.overflow;
   options: OptionObjectPayload[];
   confirm?: ConfirmObjectPayload;
 }
 
-export interface PlainTextInputElementPayload extends InteractiveElementPayloadBlockPayload {
+export interface PlainTextInputElementPayload extends InteractiveElementPayload {
   type: BlockTypes.plainTextInput;
   placeholder?: PlainTextObjectPayload;
   initial_value?: string;
@@ -172,14 +172,14 @@ export interface PlainTextInputElementPayload extends InteractiveElementPayloadB
   dispatch_action_config?: DispatchActionConfigObjectPayload;
 }
 
-export interface RadioButtonGroupElementPayload extends InteractiveElementPayloadBlockPayload {
+export interface RadioButtonGroupElementPayload extends InteractiveElementPayload {
   type: BlockTypes.radioButtons;
   options: OptionObjectPayload[];
   initial_option: OptionObjectPayload;
   confirm?: ConfirmObjectPayload;
 }
 
-export interface StaticSelectMenuElementPayload extends InteractiveElementPayloadBlockPayload {
+export interface StaticSelectMenuElementPayload extends InteractiveElementPayload {
   type: BlockTypes.staticSelect;
   placeholder?: PlainTextObjectPayload;
   options?: OptionObjectPayload[];
@@ -188,7 +188,7 @@ export interface StaticSelectMenuElementPayload extends InteractiveElementPayloa
   confirm?: ConfirmObjectPayload;
 }
 
-export interface ExternalSelectMenuElementPayload extends InteractiveElementPayloadBlockPayload {
+export interface ExternalSelectMenuElementPayload extends InteractiveElementPayload {
   type: BlockTypes.externalSelect;
   placeholder?: PlainTextObjectPayload;
   min_query_length?: number;
@@ -196,14 +196,14 @@ export interface ExternalSelectMenuElementPayload extends InteractiveElementPayl
   confirm?: ConfirmObjectPayload;
 }
 
-export interface UserSelectMenuElementPayload extends InteractiveElementPayloadBlockPayload {
+export interface UserSelectMenuElementPayload extends InteractiveElementPayload {
   type: BlockTypes.usersSelect;
   placeholder?: PlainTextObjectPayload;
   initial_user?: string;
   confirm?: ConfirmObjectPayload;
 }
 
-export interface ConversationSelectMenuElementPayload extends InteractiveElementPayloadBlockPayload {
+export interface ConversationSelectMenuElementPayload extends InteractiveElementPayload {
   type: BlockTypes.conversationsSelect;
   placeholder?: PlainTextObjectPayload;
   initial_conversation?: string;
@@ -212,14 +212,14 @@ export interface ConversationSelectMenuElementPayload extends InteractiveElement
   filter?: FilterObjectPayload;
 }
 
-export interface PublicChannelsSelectMenuElementPayload extends InteractiveElementPayloadBlockPayload {
+export interface PublicChannelsSelectMenuElementPayload extends InteractiveElementPayload {
   type: BlockTypes.channelsSelect;
   placeholder?: PlainTextObjectPayload;
   initial_channel: string;
   confirm?: ConfirmObjectPayload;
 }
 
-export interface TimepickerElementPayload extends InteractiveElementPayloadBlockPayload {
+export interface TimepickerElementPayload extends InteractiveElementPayload {
   type: BlockTypes.timepicker;
   placeholder?: PlainTextObjectPayload;
   initial_time?: string;
