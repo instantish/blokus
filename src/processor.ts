@@ -577,6 +577,15 @@ const handlePresentationalBlock = async (
   }
 };
 
+/**
+ * Renders the given view and generates the valid payload for Slack. It will
+ * execute the components and validate the inputs based on slack's
+ * documentation.
+ * @param view  The view to generate.
+ * @returns  Returns the generated payload, validated.
+ * @throws  Will throw errors if the payload is invalid or if generation is
+ * impossible.
+ */
 export const render = async (view: View): Promise<ViewPayload> => {
   const blocks = await handleChildren<ViewBlocks | MessageBlock, ViewBlockPayload | MessageBlockPayload>(
     view.blocks || [],
