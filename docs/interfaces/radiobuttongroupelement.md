@@ -34,7 +34,7 @@ interaction payload to identify the source of the action. Should be unique
 among all other action_ids in the containing block. Maximum length for
 this field is 255 characters.
 
-Defined in: [types.ts:388](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L388)
+Defined in: [types.ts:392](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L392)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 A confirm object that defines an optional confirmation dialog that appears
 after clicking one of the radio buttons in this element.
 
-Defined in: [types.ts:879](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L879)
+Defined in: [types.ts:883](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L883)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 An option object that exactly matches one of the options within options.
 This option will be selected when the radio button group initially loads.
 
-Defined in: [types.ts:873](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L873)
+Defined in: [types.ts:877](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L877)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 An array of option objects. A maximum of 10 options are allowed.
 
-Defined in: [types.ts:867](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L867)
+Defined in: [types.ts:871](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L871)
 
 ___
 
@@ -76,4 +76,4 @@ ___
 
 The type of element. In this case type is always radio_buttons.
 
-Defined in: [types.ts:862](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L862)
+Defined in: [types.ts:866](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L866)

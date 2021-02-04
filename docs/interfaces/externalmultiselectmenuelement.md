@@ -36,7 +36,7 @@ interaction payload to identify the source of the action. Should be unique
 among all other action_ids in the containing block. Maximum length for
 this field is 255 characters.
 
-Defined in: [types.ts:388](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L388)
+Defined in: [types.ts:392](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L392)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 A confirm object that defines an optional confirmation dialog that appears
 before the multi-select choices are submitted.
 
-Defined in: [types.ts:625](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L625)
+Defined in: [types.ts:629](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L629)
 
 ___
 
@@ -59,7 +59,7 @@ An array of option objects that exactly match one or more of the options
 within options or option_groups. These options will be selected when the
 menu initially loads.
 
-Defined in: [types.ts:619](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L619)
+Defined in: [types.ts:623](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L623)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 Specifies the maximum number of items that can be selected in the menu.
 Minimum number is 1.
 
-Defined in: [types.ts:631](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L631)
+Defined in: [types.ts:635](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L635)
 
 ___
 
@@ -83,7 +83,7 @@ change. If you prefer fewer requests or more fully ideated queries, use the
 min_query_length attribute to tell Slack the fewest number of typed
 characters required before dispatch. The default value is 3.
 
-Defined in: [types.ts:612](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L612)
+Defined in: [types.ts:616](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L616)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 A plain_text only text object that defines the placeholder text shown on
 the menu. Maximum length for the text in this field is 150 characters.
 
-Defined in: [types.ts:604](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L604)
+Defined in: [types.ts:608](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L608)
 
 ___
 
@@ -104,4 +104,4 @@ ___
 
 The type of element. In this case type is always multi_external_select.
 
-Defined in: [types.ts:598](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L598)
+Defined in: [types.ts:602](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L602)

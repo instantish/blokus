@@ -4,7 +4,7 @@ import {
   ConfirmObject,
   DispatchActionConfigObject,
   FilterObject,
-  MarkdownTextObject,
+  MrkdwnTextObject,
   OptionGroupObject,
   OptionObject,
   PlainTextObject,
@@ -33,10 +33,7 @@ export const Text = (params: PartialBy<Omit<PlainTextObject, 'type'>, 'text'>, t
  * the `text` property.
  * @see {@link https://api.slack.com/reference/block-kit/composition-objects#text|Official documentation}
  */
-export const Markdown = (
-  params: PartialBy<Omit<MarkdownTextObject, 'type'>, 'text'>,
-  text = ''
-): MarkdownTextObject => ({
+export const Mrkdwn = (params: PartialBy<Omit<MrkdwnTextObject, 'type'>, 'text'>, text = ''): MrkdwnTextObject => ({
   type: BlockTypes.mrkdwn,
   text,
   ...params,

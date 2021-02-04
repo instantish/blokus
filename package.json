@@ -19,7 +19,7 @@
     "test": "tsdx test",
     "test:coverage": "tsdx test --coverage",
     "clean": "git clean -fdX .",
-    "generate-docs": "typedoc --plugin typedoc-plugin-markdown --out docs src/index.ts"
+    "generate-docs": "typedoc --plugin typedoc-plugin-markdown --out docs src/index.ts && rm ./docs/README.md"
   },
   "keywords": [
     "slack blocks",

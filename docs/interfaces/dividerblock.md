@@ -33,7 +33,7 @@ for this field is 255 characters. block_id should be unique for each
 message and each iteration of a message. If a message is updated, use a
 new block_id.
 
-Defined in: [types.ts:143](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L143)
+Defined in: [types.ts:147](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L147)
 
 ___
 
@@ -45,4 +45,4 @@ The type of block. For a divider block, type is always divider.
 
 Overrides: [Block](block.md).[type](block.md#type)
 
-Defined in: [types.ts:133](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L133)
+Defined in: [types.ts:137](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L137)

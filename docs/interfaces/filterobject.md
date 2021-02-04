@@ -31,7 +31,7 @@ or conversations multi-select menu.
 Indicates whether to exclude bot users from conversation lists.
 Defaults to false.
 
-Defined in: [types.ts:1404](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1404)
+Defined in: [types.ts:1408](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1408)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 Indicates whether to exclude external shared channels from conversation
 lists. Defaults to false.
 
-Defined in: [types.ts:1398](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1398)
+Defined in: [types.ts:1402](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1402)
 
 ___
 
@@ -57,7 +57,7 @@ excluded
 You should provide an array of strings from the following options: `im`,
 `mpim`, `private`, and `public`. The array cannot be empty.
 
-Defined in: [types.ts:1392](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1392)
+Defined in: [types.ts:1396](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1396)
 
 ___
 
@@ -71,4 +71,4 @@ Internal type property
 
 Overrides: [Block](block.md).[type](block.md#type)
 
-Defined in: [types.ts:1382](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1382)
+Defined in: [types.ts:1386](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1386)

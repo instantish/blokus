@@ -33,17 +33,17 @@ for this field is 255 characters. block_id should be unique for each
 message and each iteration of a message. If a message is updated, use a
 new block_id.
 
-Defined in: [types.ts:115](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L115)
+Defined in: [types.ts:119](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L119)
 
 ___
 
 ### elements
 
-• **elements**: [*BlocksOrGenerators*](../modules.md#blocksorgenerators)<[*ImageElementBlock*](imageelementblock.md) \| [*PlainTextObject*](plaintextobject.md) \| [*MarkdownTextObject*](markdowntextobject.md)\>
+• **elements**: [*BlocksOrGenerators*](../modules.md#blocksorgenerators)<[*ImageElementBlock*](imageelementblock.md) \| [*PlainTextObject*](plaintextobject.md) \| [*MrkdwnTextObject*](mrkdwntextobject.md)\>
 
 An array of image elements and text objects. Maximum number of items is 10.
 
-Defined in: [types.ts:120](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L120)
+Defined in: [types.ts:124](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L124)
 
 ___
 
@@ -55,4 +55,4 @@ The type of block. For a context block, type is always context.
 
 Overrides: [Block](block.md).[type](block.md#type)
 
-Defined in: [types.ts:105](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L105)
+Defined in: [types.ts:109](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L109)

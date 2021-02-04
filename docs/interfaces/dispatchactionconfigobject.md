@@ -36,7 +36,7 @@ explaining to the user to press enter to submit.
 `on_character_entered` — payload is dispatched when a character is entered
 (or removed) in the input.
 
-Defined in: [types.ts:1368](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1368)
+Defined in: [types.ts:1372](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1372)
 
 ___
 
@@ -50,4 +50,4 @@ Internal type property
 
 Overrides: [Block](block.md).[type](block.md#type)
 
-Defined in: [types.ts:1355](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1355)
+Defined in: [types.ts:1359](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1359)

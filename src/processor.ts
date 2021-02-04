@@ -14,7 +14,7 @@ import {
   OptionGroupObject,
   FormElement,
   ConfirmObject,
-  MarkdownTextObject,
+  MrkdwnTextObject,
   FilterObject,
   DispatchActionConfigObject,
   Block,
@@ -31,7 +31,7 @@ import {
   FilterObjectPayload,
   FormElementPayload,
   ImageElementPayload,
-  MarkdownTextObjectPayload,
+  MrkdwnTextObjectPayload,
   OptionGroupObjectPayload,
   OptionObjectPayload,
   PlainTextObjectPayload,
@@ -121,7 +121,7 @@ const handlePlainText = async (text: PlainTextObject): Promise<PlainTextObjectPa
   emoji: text.emoji,
 });
 
-const handleMarkdown = async (text: MarkdownTextObject): Promise<MarkdownTextObjectPayload> => ({
+const handleMarkdown = async (text: MrkdwnTextObject): Promise<MrkdwnTextObjectPayload> => ({
   type: text.type,
   text: text.text,
   verbatim: text.verbatim,

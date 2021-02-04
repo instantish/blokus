@@ -10,10 +10,10 @@ Virtual component block that's used for rendering the final blocks tree.
 
 ## Type parameters
 
-Name | Description |
------- | ------ |
-`T` | Props object.   |
-`O` | - |
+Name | Default | Description |
+------ | ------ | ------ |
+`T` | {} | Props object.   |
+`O` | {} | - |
 
 ## Hierarchy
 
@@ -33,7 +33,7 @@ Name | Description |
 
 • **children**: [*BlocksOrGenerators*](../modules.md#blocksorgenerators)<[*Block*](block.md)\>
 
-Defined in: [types.ts:38](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L38)
+Defined in: [types.ts:42](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L42)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 • **params**: {}
 
-Defined in: [types.ts:37](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L37)
+Defined in: [types.ts:41](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L41)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 • **type**: [*FunctionalComponent*](../modules.md#functionalcomponent)<T, O\>
 
-Defined in: [types.ts:36](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L36)
+Defined in: [types.ts:40](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L40)

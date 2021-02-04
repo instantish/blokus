@@ -34,7 +34,7 @@ interaction payload to identify the source of the action. Should be unique
 among all other action_ids in the containing block. Maximum length for
 this field is 255 characters.
 
-Defined in: [types.ts:388](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L388)
+Defined in: [types.ts:392](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L392)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 A confirm object that defines an optional confirmation dialog that appears
 after a menu item is selected.
 
-Defined in: [types.ts:1001](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1001)
+Defined in: [types.ts:1005](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1005)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 The user ID of any valid user to be pre-selected when the menu loads.
 
-Defined in: [types.ts:995](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L995)
+Defined in: [types.ts:999](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L999)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 A plain_text only text object that defines the placeholder text shown on
 the menu. Maximum length for the text in this field is 150 characters.
 
-Defined in: [types.ts:990](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L990)
+Defined in: [types.ts:994](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L994)
 
 ___
 
@@ -76,4 +76,4 @@ ___
 
 The type of element. In this case type is always users_select.
 
-Defined in: [types.ts:984](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L984)
+Defined in: [types.ts:988](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L988)

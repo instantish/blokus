@@ -30,7 +30,7 @@ Base interface for blocks. Adds a mandatory type property to all blocks.
 
   ↳ [*PlainTextObject*](plaintextobject.md)
 
-  ↳ [*MarkdownTextObject*](markdowntextobject.md)
+  ↳ [*MrkdwnTextObject*](mrkdwntextobject.md)
 
   ↳ [*ConfirmObject*](confirmobject.md)
 
@@ -60,4 +60,4 @@ Base interface for blocks. Adds a mandatory type property to all blocks.
 
 • **type**: *string*
 
-Defined in: [types.ts:65](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L65)
+Defined in: [types.ts:69](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L69)

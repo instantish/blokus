@@ -37,7 +37,7 @@ interaction payload to identify the source of the action. Should be unique
 among all other action_ids in the containing block. Maximum length for
 this field is 255 characters.
 
-Defined in: [types.ts:388](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L388)
+Defined in: [types.ts:392](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L392)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 A confirm object that defines an optional confirmation dialog that appears
 after a time is selected.
 
-Defined in: [types.ts:1112](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1112)
+Defined in: [types.ts:1116](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1116)
 
 ___
 
@@ -61,7 +61,7 @@ be in the format `HH:mm`, where `HH` is the 24-hour format of an hour
 (00 to 23) and `mm` is minutes with leading zeros (00 to 59), for example
 22:25 for 10:25pm.
 
-Defined in: [types.ts:1106](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1106)
+Defined in: [types.ts:1110](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1110)
 
 ___
 
@@ -73,7 +73,7 @@ A plain_text only text object that defines the placeholder text shown on
 the timepicker. Maximum length for the text in this field is 150
 characters.
 
-Defined in: [types.ts:1098](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1098)
+Defined in: [types.ts:1102](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1102)
 
 ___
 
@@ -83,4 +83,4 @@ ___
 
 The type of element. In this case type is always timepicker.
 
-Defined in: [types.ts:1091](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1091)
+Defined in: [types.ts:1095](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1095)

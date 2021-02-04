@@ -33,7 +33,7 @@ for this field is 255 characters. block_id should be unique for each
 message and each iteration of a message. If a message is updated, use a
 new block_id.
 
-Defined in: [types.ts:87](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L87)
+Defined in: [types.ts:91](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L91)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 An array of interactive element objects - buttons, select menus, overflow
 menus, or date pickers. There is a maximum of 5 elements in each action block.
 
-Defined in: [types.ts:93](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L93)
+Defined in: [types.ts:97](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L97)
 
 ___
 
@@ -56,4 +56,4 @@ The type of block. For an actions block, type is always actions.
 
 Overrides: [Block](block.md).[type](block.md#type)
 
-Defined in: [types.ts:77](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L77)
+Defined in: [types.ts:81](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L81)

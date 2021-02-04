@@ -39,7 +39,7 @@ for this field is 255 characters. block_id should be unique for each
 message and each iteration of a message. If a message is updated, use a
 new block_id.
 
-Defined in: [types.ts:270](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L270)
+Defined in: [types.ts:274](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L274)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 A boolean that indicates whether or not the use of elements in this block
 should dispatch a block_actions payload. Defaults to false.
 
-Defined in: [types.ts:289](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L289)
+Defined in: [types.ts:293](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L293)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 A plain-text input element, a checkbox element, a radio button element,
 a select menu element, a multi-select menu element, or a datepicker.
 
-Defined in: [types.ts:283](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L283)
+Defined in: [types.ts:287](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L287)
 
 ___
 
@@ -73,7 +73,7 @@ An optional hint that appears below an input element in a lighter grey.
 It must be a a text object with a type of plain_text. Maximum length for
 the text in this field is 2000 characters.
 
-Defined in: [types.ts:296](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L296)
+Defined in: [types.ts:300](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L300)
 
 ___
 
@@ -85,7 +85,7 @@ A label that appears above an input element in the form of a text object
 that must have type of plain_text. Maximum length for the text in this
 field is 2000 characters.
 
-Defined in: [types.ts:277](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L277)
+Defined in: [types.ts:281](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L281)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 A boolean that indicates whether the input element may be empty when a
 user submits the modal. Defaults to false.
 
-Defined in: [types.ts:302](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L302)
+Defined in: [types.ts:306](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L306)
 
 ___
 
@@ -108,4 +108,4 @@ The type of block. For an input block, type is always input.
 
 Overrides: [Block](block.md).[type](block.md#type)
 
-Defined in: [types.ts:260](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L260)
+Defined in: [types.ts:264](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L264)

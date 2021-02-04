@@ -31,7 +31,7 @@ A simple image block, designed to make those cat photos really pop.
 A plain-text summary of the image. This should not contain any markup.
 Maximum length for this field is 2000 characters.
 
-Defined in: [types.ts:239](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L239)
+Defined in: [types.ts:243](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L243)
 
 ___
 
@@ -46,7 +46,7 @@ for this field is 255 characters. block_id should be unique for each
 message and each iteration of a message. If a message is updated, use a
 new block_id.
 
-Defined in: [types.ts:227](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L227)
+Defined in: [types.ts:231](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L231)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 The URL of the image to be displayed. Maximum length for this field is
 3000 characters.
 
-Defined in: [types.ts:233](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L233)
+Defined in: [types.ts:237](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L237)
 
 ___
 
@@ -69,7 +69,7 @@ An optional title for the image in the form of a text object that can only
 be of type: plain_text. Maximum length for the text in this field is
 2000 characters.
 
-Defined in: [types.ts:246](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L246)
+Defined in: [types.ts:250](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L250)
 
 ___
 
@@ -81,4 +81,4 @@ The type of block. For an image block, type is always image.
 
 Overrides: [Block](block.md).[type](block.md#type)
 
-Defined in: [types.ts:217](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L217)
+Defined in: [types.ts:221](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L221)

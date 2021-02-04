@@ -32,7 +32,7 @@ of the available block elements.
 
 One of the available element objects.
 
-Defined in: [types.ts:346](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L346)
+Defined in: [types.ts:350](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L350)
 
 ___
 
@@ -47,7 +47,7 @@ for this field is 255 characters. block_id should be unique for each
 message and each iteration of a message. If a message is updated, use a
 new block_id.
 
-Defined in: [types.ts:326](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L326)
+Defined in: [types.ts:330](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L330)
 
 ___
 
@@ -60,7 +60,7 @@ included with fields will be rendered in a compact format that allows for 2
 columns of side-by-side text. Maximum number of items is 10. Maximum length
 for the text in each item is 2000 characters.
 
-Defined in: [types.ts:341](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L341)
+Defined in: [types.ts:345](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L345)
 
 ___
 
@@ -72,7 +72,7 @@ The text for the block, in the form of a text object. Maximum length for
 the text in this field is 3000 characters. This field is not required if a
 valid array of fields objects is provided instead.
 
-Defined in: [types.ts:333](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L333)
+Defined in: [types.ts:337](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L337)
 
 ___
 
@@ -84,4 +84,4 @@ The type of block. For a section block, type will always be section.
 
 Overrides: [Block](block.md).[type](block.md#type)
 
-Defined in: [types.ts:316](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L316)
+Defined in: [types.ts:320](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L320)

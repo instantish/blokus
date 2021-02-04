@@ -19,7 +19,7 @@ import {
   Image,
   ImageElement,
   Input,
-  Markdown,
+  Mrkdwn,
   Message,
   Modal,
   Option,
@@ -117,7 +117,7 @@ describe('Rendering blocks', () => {
           },
           [
             Component(() => Text({ emoji: sample }, sample), {}),
-            Component(() => Markdown({ verbatim: sample }, sample), {}),
+            Component(() => Mrkdwn({ verbatim: sample }, sample), {}),
             Component(() => ImageElement({ altText: sample, imageUrl: sample }), {}),
           ]
         ),
@@ -321,7 +321,7 @@ describe('Rendering blocks', () => {
             text: sampleText,
             blockId: sample,
           },
-          [Component(() => Markdown({}, sample), {})]
+          [Component(() => Mrkdwn({}, sample), {})]
         ),
       {}
     ),

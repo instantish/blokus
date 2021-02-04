@@ -40,7 +40,7 @@ interaction payload to identify the source of the action. Should be unique
 among all other action_ids in the containing block. Maximum length for
 this field is 255 characters.
 
-Defined in: [types.ts:388](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L388)
+Defined in: [types.ts:392](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L392)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 A confirm object that defines an optional confirmation dialog that appears
 after a menu item is selected.
 
-Defined in: [types.ts:799](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L799)
+Defined in: [types.ts:803](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L803)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 An array of option objects to display in the menu. Maximum number of
 options is 5, minimum is 2.
 
-Defined in: [types.ts:793](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L793)
+Defined in: [types.ts:797](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L797)
 
 ___
 
@@ -72,4 +72,4 @@ ___
 
 The type of element. In this case type is always overflow.
 
-Defined in: [types.ts:787](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L787)
+Defined in: [types.ts:791](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L791)

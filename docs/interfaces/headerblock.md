@@ -34,7 +34,7 @@ for this field is 255 characters. block_id should be unique for each
 message and each iteration of a message. If a message is updated, use a
 new block_id.
 
-Defined in: [types.ts:199](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L199)
+Defined in: [types.ts:203](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L203)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 The text for the block, in the form of a plain_text text object.
 Maximum length for the text in this field is 150 characters.
 
-Defined in: [types.ts:205](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L205)
+Defined in: [types.ts:209](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L209)
 
 ___
 
@@ -57,4 +57,4 @@ The type of block. For this block, type will always be header.
 
 Overrides: [Block](block.md).[type](block.md#type)
 
-Defined in: [types.ts:189](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L189)
+Defined in: [types.ts:193](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L193)

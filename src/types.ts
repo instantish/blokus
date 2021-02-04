@@ -24,7 +24,10 @@ export type PropsWithChildren<T = Props> = T & {
  * @typeParam T  Props object.
  * @typeParam T  Output type, should be a valid block.
  */
-export type FunctionalComponent<T extends PropsWithChildren, O> = (params: PropsWithChildren<T>) => Promise<O> | O;
+// eslint-disable-next-line @typescript-eslint/ban-types
+export type FunctionalComponent<T extends PropsWithChildren = {}, O = {}> = (
+  params: PropsWithChildren<T>
+) => Promise<O> | O;
 
 /**
  * Virtual component block that's used for rendering the final blocks tree.
@@ -32,7 +35,8 @@ export type FunctionalComponent<T extends PropsWithChildren, O> = (params: Props
  * @typeParam T  Output type, should be a valid block.
  * @internal
  */
-export interface ComponentBlock<T, O> {
+// eslint-disable-next-line @typescript-eslint/ban-types
+export interface ComponentBlock<T = {}, O = {}> {
   type: FunctionalComponent<T, O>;
   params: Props;
   children: BlocksOrGenerators<Block>;
@@ -1192,7 +1196,7 @@ export interface PlainTextObject extends Block {
  * @extends Block
  * @see {@link https://api.slack.com/reference/block-kit/composition-objects#text|Official documentation}
  */
-export interface MarkdownTextObject extends Block {
+export interface MrkdwnTextObject extends Block {
   /**
    * The type of element. In this case type is always mrkdwn.
    */
@@ -1221,7 +1225,7 @@ export interface MarkdownTextObject extends Block {
  * mrkdwn, our proprietary contribution to the much beloved Markdown standard.
  * @internal
  */
-export type TextObject = PlainTextObject | MarkdownTextObject;
+export type TextObject = PlainTextObject | MrkdwnTextObject;
 
 /**
  * An object that defines a dialog that provides a confirmation step to any

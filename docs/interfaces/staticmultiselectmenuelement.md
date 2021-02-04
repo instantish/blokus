@@ -40,7 +40,7 @@ interaction payload to identify the source of the action. Should be unique
 among all other action_ids in the containing block. Maximum length for
 this field is 255 characters.
 
-Defined in: [types.ts:388](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L388)
+Defined in: [types.ts:392](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L392)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 A confirm object that defines an optional confirmation dialog that appears
 before the multi-select choices are submitted.
 
-Defined in: [types.ts:572](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L572)
+Defined in: [types.ts:576](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L576)
 
 ___
 
@@ -64,7 +64,7 @@ into the 2 options properties.
 
 **`internal`** 
 
-Defined in: [types.ts:585](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L585)
+Defined in: [types.ts:589](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L589)
 
 ___
 
@@ -76,7 +76,7 @@ An array of option objects that exactly match one or more of the options
 within options or option_groups. These options will be selected when the
 menu initially loads.
 
-Defined in: [types.ts:566](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L566)
+Defined in: [types.ts:570](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L570)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 Specifies the maximum number of items that can be selected in the menu.
 Minimum number is 1.
 
-Defined in: [types.ts:578](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L578)
+Defined in: [types.ts:582](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L582)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 An array of option group objects. Maximum number of option groups is 100.
 If options is specified, this field should not be.
 
-Defined in: [types.ts:559](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L559)
+Defined in: [types.ts:563](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L563)
 
 ___
 
@@ -109,7 +109,7 @@ ___
 An array of option objects. Maximum number of options is 100. If
 option_groups is specified, this field should not be.
 
-Defined in: [types.ts:553](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L553)
+Defined in: [types.ts:557](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L557)
 
 ___
 
@@ -120,7 +120,7 @@ ___
 A plain_text only text object that defines the placeholder text shown on
 the menu. Maximum length for the text in this field is 150 characters.
 
-Defined in: [types.ts:547](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L547)
+Defined in: [types.ts:551](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L551)
 
 ___
 
@@ -130,4 +130,4 @@ ___
 
 The type of element. In this case type is always multi_static_select.
 
-Defined in: [types.ts:541](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L541)
+Defined in: [types.ts:545](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L545)

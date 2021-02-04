@@ -274,13 +274,13 @@ export interface PlainTextObjectPayload extends BlockPayload {
   emoji?: string;
 }
 
-export interface MarkdownTextObjectPayload extends BlockPayload {
+export interface MrkdwnTextObjectPayload extends BlockPayload {
   type: BlockTypes.mrkdwn;
   text: string;
   verbatim?: string;
 }
 
-export type TextObjectPayload = PlainTextObjectPayload | MarkdownTextObjectPayload;
+export type TextObjectPayload = PlainTextObjectPayload | MrkdwnTextObjectPayload;
 
 export interface ConfirmObjectPayload {
   title: PlainTextObjectPayload;

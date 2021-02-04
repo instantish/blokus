@@ -33,7 +33,7 @@ interaction payload to identify the source of the action. Should be unique
 among all other action_ids in the containing block. Maximum length for
 this field is 255 characters.
 
-Defined in: [types.ts:388](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L388)
+Defined in: [types.ts:392](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L392)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 A confirm object that defines an optional confirmation dialog that appears
 after a date is selected.
 
-Defined in: [types.ts:503](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L503)
+Defined in: [types.ts:507](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L507)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 The initial date that is selected when the element is loaded. This should
 be in the format `YYYY-MM-DD`.
 
-Defined in: [types.ts:497](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L497)
+Defined in: [types.ts:501](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L501)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 A plain_text only text object that defines the placeholder text shown on
 the datepicker. Maximum length for the text in this field is 150 characters.
 
-Defined in: [types.ts:491](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L491)
+Defined in: [types.ts:495](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L495)
 
 ___
 
@@ -76,4 +76,4 @@ ___
 
 The type of element. In this case type is always datepicker.
 
-Defined in: [types.ts:485](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L485)
+Defined in: [types.ts:489](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L489)

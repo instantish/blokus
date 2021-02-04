@@ -38,7 +38,7 @@ interaction payload to identify the source of the action. Should be unique
 among all other action_ids in the containing block. Maximum length for
 this field is 255 characters.
 
-Defined in: [types.ts:388](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L388)
+Defined in: [types.ts:392](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L392)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 A dispatch configuration object that determines when during text input the
 element returns a block_actions payload.
 
-Defined in: [types.ts:849](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L849)
+Defined in: [types.ts:853](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L853)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 The initial value in the plain-text input when it is loaded.
 
-Defined in: [types.ts:825](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L825)
+Defined in: [types.ts:829](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L829)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 The maximum length of input that the user can provide. If the user provides
 more, they will receive an error.
 
-Defined in: [types.ts:843](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L843)
+Defined in: [types.ts:847](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L847)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 The minimum length of input that the user must provide. If the user
 provides less, they will receive an error. Maximum value is 3000.
 
-Defined in: [types.ts:837](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L837)
+Defined in: [types.ts:841](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L841)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 Indicates whether the input will be a single line (false) or a larger
 textarea (true). Defaults to false.
 
-Defined in: [types.ts:831](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L831)
+Defined in: [types.ts:835](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L835)
 
 ___
 
@@ -104,7 +104,7 @@ A plain_text only text object that defines the placeholder text shown in
 the plain-text input. Maximum length for the text in this field is 150
 characters.
 
-Defined in: [types.ts:820](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L820)
+Defined in: [types.ts:824](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L824)
 
 ___
 
@@ -114,4 +114,4 @@ ___
 
 The type of element. In this case type is always plain_text_input.
 
-Defined in: [types.ts:813](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L813)
+Defined in: [types.ts:817](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L817)

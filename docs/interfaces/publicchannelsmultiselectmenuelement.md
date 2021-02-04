@@ -35,7 +35,7 @@ interaction payload to identify the source of the action. Should be unique
 among all other action_ids in the containing block. Maximum length for
 this field is 255 characters.
 
-Defined in: [types.ts:388](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L388)
+Defined in: [types.ts:392](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L392)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 A confirm object that defines an optional confirmation dialog that appears
 before the multi-select choices are submitted.
 
-Defined in: [types.ts:750](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L750)
+Defined in: [types.ts:754](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L754)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 An array of one or more IDs of any valid public channel to be pre-selected
 when the menu loads.
 
-Defined in: [types.ts:744](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L744)
+Defined in: [types.ts:748](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L748)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 Specifies the maximum number of items that can be selected in the menu.
 Minimum number is 1.
 
-Defined in: [types.ts:756](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L756)
+Defined in: [types.ts:760](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L760)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 A plain_text only text object that defines the placeholder text shown on
 the menu. Maximum length for the text in this field is 150 characters.
 
-Defined in: [types.ts:738](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L738)
+Defined in: [types.ts:742](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L742)
 
 ___
 
@@ -89,4 +89,4 @@ ___
 
 The type of element. In this case type is always multi_channels_select.
 
-Defined in: [types.ts:732](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L732)
+Defined in: [types.ts:736](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L736)

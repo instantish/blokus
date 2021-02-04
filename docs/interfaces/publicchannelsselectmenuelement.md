@@ -34,7 +34,7 @@ interaction payload to identify the source of the action. Should be unique
 among all other action_ids in the containing block. Maximum length for
 this field is 255 characters.
 
-Defined in: [types.ts:388](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L388)
+Defined in: [types.ts:392](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L392)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 A confirm object that defines an optional confirmation dialog that appears
 after a menu item is selected.
 
-Defined in: [types.ts:1075](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1075)
+Defined in: [types.ts:1079](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1079)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 The ID of any valid public channel to be pre-selected when the menu loads.
 
-Defined in: [types.ts:1069](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1069)
+Defined in: [types.ts:1073](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1073)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 A plain_text only text object that defines the placeholder text shown on
 the menu. Maximum length for the text in this field is 150 characters.
 
-Defined in: [types.ts:1064](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1064)
+Defined in: [types.ts:1068](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1068)
 
 ___
 
@@ -76,4 +76,4 @@ ___
 
 The type of element. In this case type is always channels_select.
 
-Defined in: [types.ts:1058](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1058)
+Defined in: [types.ts:1062](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1062)

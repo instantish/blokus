@@ -29,6 +29,8 @@ import { Text } from './objectsFactories';
 
 /**
  * Generates a button element from slack.
+ *
+ * **JSX tag**: <button>
  * @param params  The various properties available to this block or element.
  * @param text  The text to add inside the element, strings will automatically
  * converted to plain_text blocks. Replaces the `text` property.
@@ -45,6 +47,8 @@ export const Button = (
 
 /**
  * Generates a checkboxes element from slack.
+ *
+ * **JSX tag**: <checkboxes>
  * @param params  The various properties available to this block or element.
  * @param options  The options to use for the element, sub-arrays will automatically
  * be flattened. Replaces the `options` property.
@@ -61,6 +65,8 @@ export const CheckboxGroup = (
 
 /**
  * Generates a datepicker element from slack.
+ *
+ * **JSX tag**: <datepicker>
  * @param params  The various properties available to this block or element.
  * @see {@link https://api.slack.com/reference/block-kit/block-elements#datepicker|Official documentation}
  */
@@ -71,6 +77,8 @@ export const Datepicker = (params: Omit<DatepickerElement, 'type'>): DatepickerE
 
 /**
  * Generates an image element from slack.
+ *
+ * **JSX tag**: <image-element>
  * @param params  The various properties available to this block or element.
  * @see {@link https://api.slack.com/reference/block-kit/block-elements#image|Official documentation}
  */
@@ -81,6 +89,8 @@ export const ImageElement = (params: Omit<ImageElementBlock, 'type'>): ImageElem
 
 /**
  * Generates a static multi select element from slack.
+ *
+ * **JSX tag**: <multiselect>
  * @param params  The various properties available to this block or element.
  * @param options  The options to use for the element, sub-arrays will automatically
  * be flattened. May pass either options and option groups types, blokus will
@@ -100,6 +110,8 @@ export const StaticMultiSelect = (
 
 /**
  * Generates an external multi select element from slack.
+ *
+ * **JSX tag**: <external-multiselect>
  * @param params  The various properties available to this block or element.
  * @see {@link https://api.slack.com/reference/block-kit/block-elements#external_multi_select|Official documentation}
  */
@@ -112,6 +124,8 @@ export const ExternalMultiSelect = (
 
 /**
  * Generates a user multi select element from slack.
+ *
+ * **JSX tag**: <user-multiselect>
  * @param params  The various properties available to this block or element.
  * @see {@link https://api.slack.com/reference/block-kit/block-elements#users_multi_select|Official documentation}
  */
@@ -122,6 +136,8 @@ export const UserMultiSelect = (params: Omit<UserMultiSelectMenuElement, 'type'>
 
 /**
  * Generates a conversation multi select element from slack.
+ *
+ * **JSX tag**: <conversation-multiselect>
  * @param params  The various properties available to this block or element.
  * @see {@link https://api.slack.com/reference/block-kit/block-elements#conversation_multi_select|Official documentation}
  */
@@ -134,6 +150,8 @@ export const ConversationMultiSelect = (
 
 /**
  * Generates a public channels multi select element from slack.
+ *
+ * **JSX tag**: <channels-multiselect>
  * @param params  The various properties available to this block or element.
  * @see {@link https://api.slack.com/reference/block-kit/block-elements#channel_multi_select|Official documentation}
  */
@@ -146,6 +164,8 @@ export const PublicChannelsMultiSelect = (
 
 /**
  * Generates an overflow menu element from slack.
+ *
+ * **JSX tag**: <overflow>
  * @param params  The various properties available to this block or element.
  * @param options  The options to use for the element, sub-arrays will automatically
  * be flattened. Replaces the `options` property.
@@ -162,6 +182,8 @@ export const OverflowMenu = (
 
 /**
  * Generates a plain text input element from slack.
+ *
+ * **JSX tag**: <plain-text>
  * @param params  The various properties available to this block or element.
  * @see {@link https://api.slack.com/reference/block-kit/block-elements#input|Official documentation}
  */
@@ -172,6 +194,8 @@ export const PlainTextInput = (params: Omit<PlainTextInputElement, 'type'>): Pla
 
 /**
  * Generates an radio button group element from slack.
+ *
+ * **JSX tag**: <radio>
  * @param params  The various properties available to this block or element.
  * @param options  The options to use for the element, sub-arrays will automatically
  * be flattened. Replaces the `options` property.
@@ -188,6 +212,8 @@ export const RadioButtonGroup = (
 
 /**
  * Generates a static select element from slack.
+ *
+ * **JSX tag**: <select>
  * @param params  The various properties available to this block or element.
  * @param options  The options to use for the element, sub-arrays will automatically
  * be flattened. May pass either options and option groups types, blokus will
@@ -207,6 +233,8 @@ export const StaticSelect = (
 
 /**
  * Generates an external select element from slack.
+ *
+ * **JSX tag**: <external-select>
  * @param params  The various properties available to this block or element.
  * @see {@link https://api.slack.com/reference/block-kit/block-elements#external_select|Official documentation}
  */
@@ -217,6 +245,8 @@ export const ExternalSelect = (params: Omit<ExternalSelectMenuElement, 'type'>):
 
 /**
  * Generates a user select element from slack.
+ *
+ * **JSX tag**: <user-select>
  * @param params  The various properties available to this block or element.
  * @see {@link https://api.slack.com/reference/block-kit/block-elements#users_select|Official documentation}
  */
@@ -227,6 +257,8 @@ export const UserSelect = (params: Omit<UserSelectMenuElement, 'type'>): UserSel
 
 /**
  * Generates a conversation select element from slack.
+ *
+ * **JSX tag**: <conversation-select>
  * @param params  The various properties available to this block or element.
  * @see {@link https://api.slack.com/reference/block-kit/block-elements#conversation_select|Official documentation}
  */
@@ -235,10 +267,13 @@ export const ConversationSelect = (
 ): ConversationSelectMenuElement => ({
   type: BlockTypes.conversationsSelect,
   ...params,
+
 });
 
 /**
  * Generates a public channels select element from slack.
+ *
+ * **JSX tag**: <channels-select>
  * @param params  The various properties available to this block or element.
  * @see {@link https://api.slack.com/reference/block-kit/block-elements#channel_select|Official documentation}
  */
@@ -251,6 +286,8 @@ export const PublicChannelsSelect = (
 
 /**
  * Generates a timepicker element from slack.
+ *
+ * **JSX tag**: <timepicker>
  * @param params  The various properties available to this block or element.
  * @see {@link https://api.slack.com/reference/block-kit/block-elements#timepicker|Official documentation}
  */

@@ -37,7 +37,7 @@ users, or temporarily displaying dynamic and interactive information.
 
 An array of blocks that defines the content of the view. Max of 100 blocks.
 
-Defined in: [types.ts:1440](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1440)
+Defined in: [types.ts:1444](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1444)
 
 ___
 
@@ -49,7 +49,7 @@ An identifier to recognize interactions and submissions of this particular
 view. Don't use this to store sensitive information (use private_metadata
 instead). Max length of 255 characters.
 
-Defined in: [types.ts:1466](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1466)
+Defined in: [types.ts:1470](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1470)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 When set to true, clicking on the close button will clear all views in a
 modal and close it. Defaults to false.
 
-Defined in: [types.ts:1472](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1472)
+Defined in: [types.ts:1476](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1476)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 An optional plain_text element that defines the text displayed in the close
 button at the bottom-right of the view. Max length of 24 characters.
 
-Defined in: [types.ts:1446](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1446)
+Defined in: [types.ts:1450](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1450)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 A custom identifier that must be unique for all views on a per-team basis.
 
-Defined in: [types.ts:1483](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1483)
+Defined in: [types.ts:1487](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1487)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 Indicates whether Slack will send your request URL a view_closed event
 when a user clicks the close button. Defaults to false.
 
-Defined in: [types.ts:1478](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1478)
+Defined in: [types.ts:1482](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1482)
 
 ___
 
@@ -103,7 +103,7 @@ ___
 An optional string that will be sent to your app in view_submission and
 block_actions events. Max length of 3000 characters.
 
-Defined in: [types.ts:1459](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1459)
+Defined in: [types.ts:1463](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1463)
 
 ___
 
@@ -115,7 +115,7 @@ An optional plain_text element that defines the text displayed in the
 submit button at the bottom-right of the view. submit is required when an
 input block is within the blocks array. Max length of 24 characters.
 
-Defined in: [types.ts:1453](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1453)
+Defined in: [types.ts:1457](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1457)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 When set to true, disables the submit button until the user has completed
 one or more inputs. This property is primarily for configuration modals.
 
-Defined in: [types.ts:1489](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1489)
+Defined in: [types.ts:1493](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1493)
 
 ___
 
@@ -137,7 +137,7 @@ ___
 The title that appears in the top-left of the modal. Must be a plain_text
 text element with a max length of 24 characters.
 
-Defined in: [types.ts:1435](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1435)
+Defined in: [types.ts:1439](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1439)
 
 ___
 
@@ -149,4 +149,4 @@ The type of view. In this case type is always modal.
 
 Overrides: [Block](block.md).[type](block.md#type)
 
-Defined in: [types.ts:1429](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1429)
+Defined in: [types.ts:1433](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1433)

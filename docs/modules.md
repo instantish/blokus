@@ -27,9 +27,9 @@
 - [ImageBlock](interfaces/imageblock.md)
 - [ImageElementBlock](interfaces/imageelementblock.md)
 - [InputBlock](interfaces/inputblock.md)
-- [MarkdownTextObject](interfaces/markdowntextobject.md)
 - [MessageView](interfaces/messageview.md)
 - [ModalView](interfaces/modalview.md)
+- [MrkdwnTextObject](interfaces/mrkdwntextobject.md)
 - [OptionGroupObject](interfaces/optiongroupobject.md)
 - [OptionObject](interfaces/optionobject.md)
 - [OverflowMenuElement](interfaces/overflowmenuelement.md)
@@ -86,9 +86,9 @@
 - [Image](modules.md#image)
 - [ImageElement](modules.md#imageelement)
 - [Input](modules.md#input)
-- [Markdown](modules.md#markdown)
 - [Message](modules.md#message)
 - [Modal](modules.md#modal)
+- [Mrkdwn](modules.md#mrkdwn)
 - [Option](modules.md#option)
 - [OptionGroup](modules.md#optiongroup)
 - [OverflowMenu](modules.md#overflowmenu)
@@ -115,7 +115,7 @@ Union of all the action elements.
 
 **`internal`** 
 
-Defined in: [types.ts:1142](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1142)
+Defined in: [types.ts:1146](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1146)
 
 ___
 
@@ -135,7 +135,7 @@ Name | Description |
 ------ | ------ |
 `T` | Props object.   |
 
-Defined in: [types.ts:48](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L48)
+Defined in: [types.ts:52](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L52)
 
 ___
 
@@ -156,7 +156,7 @@ Name | Description |
 ------ | ------ |
 `T` | Props object.   |
 
-Defined in: [types.ts:58](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L58)
+Defined in: [types.ts:62](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L62)
 
 ___
 
@@ -168,7 +168,7 @@ Union of all the composition objects.
 
 **`internal`** 
 
-Defined in: [types.ts:1411](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1411)
+Defined in: [types.ts:1415](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1415)
 
 ___
 
@@ -180,7 +180,7 @@ Union of all the elements.
 
 **`internal`** 
 
-Defined in: [types.ts:1153](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1153)
+Defined in: [types.ts:1157](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1157)
 
 ___
 
@@ -192,7 +192,7 @@ Union of all the form elements.
 
 **`internal`** 
 
-Defined in: [types.ts:1130](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1130)
+Defined in: [types.ts:1134](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1134)
 
 ___
 
@@ -206,12 +206,12 @@ The type definition for the function components given as generators to blocks.
 
 #### Type parameters:
 
-Name | Type | Description |
------- | ------ | ------ |
-`T` | [*PropsWithChildren*](modules.md#propswithchildren) | Props object.   |
-`O` | - | - |
+Name | Type | Default | Description |
+------ | ------ | ------ | ------ |
+`T` | [*PropsWithChildren*](modules.md#propswithchildren) | {} | Props object.   |
+`O` | - | {} | - |
 
-Defined in: [types.ts:27](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L27)
+Defined in: [types.ts:28](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L28)
 
 ___
 
@@ -223,7 +223,7 @@ Blocks available for message views.
 
 **`internal`** 
 
-Defined in: [types.ts:366](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L366)
+Defined in: [types.ts:370](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L370)
 
 ___
 
@@ -235,7 +235,7 @@ Union of all the multi select elements.
 
 **`internal`** 
 
-Defined in: [types.ts:763](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L763)
+Defined in: [types.ts:767](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L767)
 
 ___
 
@@ -250,7 +250,7 @@ Name | Type |
 `T` | - |
 `K` | keyof T |
 
-Defined in: [types.ts:4](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L4)
+Defined in: [types.ts:4](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L4)
 
 ___
 
@@ -266,7 +266,7 @@ Name | Default | Description |
 ------ | ------ | ------ |
 `T` | {} | Props object, should be a nullable object.    |
 
-Defined in: [types.ts:11](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L11)
+Defined in: [types.ts:11](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L11)
 
 ___
 
@@ -283,7 +283,7 @@ Name | Default | Description |
 ------ | ------ | ------ |
 `T` | [*Props*](modules.md#props) | Props object, should be a nullable object.    |
 
-Defined in: [types.ts:18](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L18)
+Defined in: [types.ts:18](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L18)
 
 ___
 
@@ -295,20 +295,20 @@ Union of all the select elements.
 
 **`internal`** 
 
-Defined in: [types.ts:1119](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1119)
+Defined in: [types.ts:1123](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1123)
 
 ___
 
 ### TextObject
 
-Ƭ **TextObject**: [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MarkdownTextObject*](interfaces/markdowntextobject.md)
+Ƭ **TextObject**: [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MrkdwnTextObject*](interfaces/mrkdwntextobject.md)
 
 An object containing some text, formatted either as plain_text or using
 mrkdwn, our proprietary contribution to the much beloved Markdown standard.
 
 **`internal`** 
 
-Defined in: [types.ts:1224](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1224)
+Defined in: [types.ts:1228](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1228)
 
 ___
 
@@ -316,7 +316,7 @@ ___
 
 Ƭ **View**: [*ModalView*](interfaces/modalview.md) \| [*HomeTabView*](interfaces/hometabview.md) \| [*MessageView*](interfaces/messageview.md)
 
-Defined in: [types.ts:1565](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1565)
+Defined in: [types.ts:1569](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1569)
 
 ___
 
@@ -328,7 +328,7 @@ Blocks available in the two common views, modals and messages.
 
 **`internal`** 
 
-Defined in: [types.ts:353](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L353)
+Defined in: [types.ts:357](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L357)
 
 ## Functions
 
@@ -337,6 +337,8 @@ Defined in: [types.ts:353](https://github.com/instantish/blokus/blob/f10405c/src
 ▸ `Const`**Action**(`params`: [*PartialBy*](modules.md#partialby)<*Pick*<[*ActionBlock*](interfaces/actionblock.md), *blockId* \| *elements*\>, *elements*\>, ...`elements`: [*BlocksOrGenerators*](modules.md#blocksorgenerators)<[*ActionElement*](modules.md#actionelement)\> \| [*BlocksOrGenerators*](modules.md#blocksorgenerators)<[*ActionElement*](modules.md#actionelement)\>[]): [*ActionBlock*](interfaces/actionblock.md)
 
 Generates an action block from slack.
+
+**JSX tag**: <action>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/blocks#actions)
 
@@ -349,7 +351,7 @@ Name | Type | Description |
 
 **Returns:** [*ActionBlock*](interfaces/actionblock.md)
 
-Defined in: [factories/presentationalFactories.ts:29](https://github.com/instantish/blokus/blob/f10405c/src/factories/presentationalFactories.ts#L29)
+Defined in: [factories/presentationalFactories.ts:31](https://github.com/instantish/blokus/blob/8b8e846/src/factories/presentationalFactories.ts#L31)
 
 ___
 
@@ -358,6 +360,8 @@ ___
 ▸ `Const`**Button**(`params`: [*PartialBy*](modules.md#partialby)<*Pick*<[*ButtonElement*](interfaces/buttonelement.md), *text* \| *url* \| *value* \| *style* \| *confirm* \| *actionId*\>, *text*\>, `text`: [*BlockOrGenerator*](modules.md#blockorgenerator)<*string* \| [*PlainTextObject*](interfaces/plaintextobject.md)\>): [*ButtonElement*](interfaces/buttonelement.md)
 
 Generates a button element from slack.
+
+**JSX tag**: <button>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/block-elements#button)
 
@@ -370,7 +374,7 @@ Name | Type | Description |
 
 **Returns:** [*ButtonElement*](interfaces/buttonelement.md)
 
-Defined in: [factories/elementFactories.ts:37](https://github.com/instantish/blokus/blob/f10405c/src/factories/elementFactories.ts#L37)
+Defined in: [factories/elementFactories.ts:39](https://github.com/instantish/blokus/blob/8b8e846/src/factories/elementFactories.ts#L39)
 
 ___
 
@@ -379,6 +383,8 @@ ___
 ▸ `Const`**CheckboxGroup**(`params`: [*PartialBy*](modules.md#partialby)<*Pick*<[*CheckboxGroupElement*](interfaces/checkboxgroupelement.md), *confirm* \| *actionId* \| *options* \| *initialOptions*\>, *options*\>, ...`options`: [*BlocksOrGenerators*](modules.md#blocksorgenerators)<[*OptionObject*](interfaces/optionobject.md)\> \| [*BlocksOrGenerators*](modules.md#blocksorgenerators)<[*OptionObject*](interfaces/optionobject.md)\>[]): [*CheckboxGroupElement*](interfaces/checkboxgroupelement.md)
 
 Generates a checkboxes element from slack.
+
+**JSX tag**: <checkboxes>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/block-elements#checkboxes)
 
@@ -391,7 +397,7 @@ Name | Type | Description |
 
 **Returns:** [*CheckboxGroupElement*](interfaces/checkboxgroupelement.md)
 
-Defined in: [factories/elementFactories.ts:53](https://github.com/instantish/blokus/blob/f10405c/src/factories/elementFactories.ts#L53)
+Defined in: [factories/elementFactories.ts:57](https://github.com/instantish/blokus/blob/8b8e846/src/factories/elementFactories.ts#L57)
 
 ___
 
@@ -421,13 +427,13 @@ Name | Type | Description |
 
 Returns the generated component block, for internal use only.
 
-Defined in: [factories/componentFactories.ts:16](https://github.com/instantish/blokus/blob/f10405c/src/factories/componentFactories.ts#L16)
+Defined in: [factories/componentFactories.ts:16](https://github.com/instantish/blokus/blob/8b8e846/src/factories/componentFactories.ts#L16)
 
 ___
 
 ### Confirm
 
-▸ `Const`**Confirm**(`params`: [*PartialBy*](modules.md#partialby)<*Pick*<[*ConfirmObject*](interfaces/confirmobject.md), *text* \| *style* \| *confirm* \| *title* \| *deny*\>, *text*\>, `text`: [*BlockOrGenerator*](modules.md#blockorgenerator)<*string* \| [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MarkdownTextObject*](interfaces/markdowntextobject.md)\>): [*ConfirmObject*](interfaces/confirmobject.md)
+▸ `Const`**Confirm**(`params`: [*PartialBy*](modules.md#partialby)<*Pick*<[*ConfirmObject*](interfaces/confirmobject.md), *text* \| *style* \| *confirm* \| *title* \| *deny*\>, *text*\>, `text`: [*BlockOrGenerator*](modules.md#blockorgenerator)<*string* \| [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MrkdwnTextObject*](interfaces/mrkdwntextobject.md)\>): [*ConfirmObject*](interfaces/confirmobject.md)
 
 Generates a confirm composition object from slack.
 
@@ -438,19 +444,21 @@ Generates a confirm composition object from slack.
 Name | Type | Description |
 ------ | ------ | ------ |
 `params` | [*PartialBy*](modules.md#partialby)<*Pick*<[*ConfirmObject*](interfaces/confirmobject.md), *text* \| *style* \| *confirm* \| *title* \| *deny*\>, *text*\> | The various properties available to this object.   |
-`text` | [*BlockOrGenerator*](modules.md#blockorgenerator)<*string* \| [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MarkdownTextObject*](interfaces/markdowntextobject.md)\> | The markdown text to add inside of this confirm object. Replaces the `text` property.   |
+`text` | [*BlockOrGenerator*](modules.md#blockorgenerator)<*string* \| [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MrkdwnTextObject*](interfaces/mrkdwntextobject.md)\> | The markdown text to add inside of this confirm object. Replaces the `text` property.   |
 
 **Returns:** [*ConfirmObject*](interfaces/confirmobject.md)
 
-Defined in: [factories/objectsFactories.ts:52](https://github.com/instantish/blokus/blob/f10405c/src/factories/objectsFactories.ts#L52)
+Defined in: [factories/objectsFactories.ts:49](https://github.com/instantish/blokus/blob/8b8e846/src/factories/objectsFactories.ts#L49)
 
 ___
 
 ### Context
 
-▸ `Const`**Context**(`params`: [*PartialBy*](modules.md#partialby)<*Pick*<[*ContextBlock*](interfaces/contextblock.md), *blockId* \| *elements*\>, *elements*\>, ...`elements`: [*BlocksOrGenerators*](modules.md#blocksorgenerators)<*string* \| [*ImageElementBlock*](interfaces/imageelementblock.md) \| [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MarkdownTextObject*](interfaces/markdowntextobject.md)\> \| [*BlocksOrGenerators*](modules.md#blocksorgenerators)<*string* \| [*ImageElementBlock*](interfaces/imageelementblock.md) \| [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MarkdownTextObject*](interfaces/markdowntextobject.md)\>[]): [*ContextBlock*](interfaces/contextblock.md)
+▸ `Const`**Context**(`params`: [*PartialBy*](modules.md#partialby)<*Pick*<[*ContextBlock*](interfaces/contextblock.md), *blockId* \| *elements*\>, *elements*\>, ...`elements`: [*BlocksOrGenerators*](modules.md#blocksorgenerators)<*string* \| [*ImageElementBlock*](interfaces/imageelementblock.md) \| [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MrkdwnTextObject*](interfaces/mrkdwntextobject.md)\> \| [*BlocksOrGenerators*](modules.md#blocksorgenerators)<*string* \| [*ImageElementBlock*](interfaces/imageelementblock.md) \| [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MrkdwnTextObject*](interfaces/mrkdwntextobject.md)\>[]): [*ContextBlock*](interfaces/contextblock.md)
 
 Generates a context block from slack.
+
+**JSX tag**: <context>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/blocks#context)
 
@@ -459,11 +467,11 @@ Generates a context block from slack.
 Name | Type | Description |
 ------ | ------ | ------ |
 `params` | [*PartialBy*](modules.md#partialby)<*Pick*<[*ContextBlock*](interfaces/contextblock.md), *blockId* \| *elements*\>, *elements*\> | The various properties available to this block or element.   |
-`...elements` | [*BlocksOrGenerators*](modules.md#blocksorgenerators)<*string* \| [*ImageElementBlock*](interfaces/imageelementblock.md) \| [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MarkdownTextObject*](interfaces/markdowntextobject.md)\> \| [*BlocksOrGenerators*](modules.md#blocksorgenerators)<*string* \| [*ImageElementBlock*](interfaces/imageelementblock.md) \| [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MarkdownTextObject*](interfaces/markdowntextobject.md)\>[] | The elements to use for the block, sub-arrays will automatically be flattened. Will automatically convert strings to plain_text elements. Replaces the `elements` property.   |
+`...elements` | [*BlocksOrGenerators*](modules.md#blocksorgenerators)<*string* \| [*ImageElementBlock*](interfaces/imageelementblock.md) \| [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MrkdwnTextObject*](interfaces/mrkdwntextobject.md)\> \| [*BlocksOrGenerators*](modules.md#blocksorgenerators)<*string* \| [*ImageElementBlock*](interfaces/imageelementblock.md) \| [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MrkdwnTextObject*](interfaces/mrkdwntextobject.md)\>[] | The elements to use for the block, sub-arrays will automatically be flattened. Will automatically convert strings to plain_text elements. Replaces the `elements` property.   |
 
 **Returns:** [*ContextBlock*](interfaces/contextblock.md)
 
-Defined in: [factories/presentationalFactories.ts:46](https://github.com/instantish/blokus/blob/f10405c/src/factories/presentationalFactories.ts#L46)
+Defined in: [factories/presentationalFactories.ts:50](https://github.com/instantish/blokus/blob/8b8e846/src/factories/presentationalFactories.ts#L50)
 
 ___
 
@@ -472,6 +480,8 @@ ___
 ▸ `Const`**ConversationMultiSelect**(`params`: *Pick*<[*ConversationMultiSelectMenuElement*](interfaces/conversationmultiselectmenuelement.md), *confirm* \| *actionId* \| *placeholder* \| *maxSelectedItems* \| *initialConversations* \| *defaultToCurrentConversation* \| *filter*\>): [*ConversationMultiSelectMenuElement*](interfaces/conversationmultiselectmenuelement.md)
 
 Generates a conversation multi select element from slack.
+
+**JSX tag**: <conversation-multiselect>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/block-elements#conversation_multi_select)
 
@@ -483,7 +493,7 @@ Name | Type | Description |
 
 **Returns:** [*ConversationMultiSelectMenuElement*](interfaces/conversationmultiselectmenuelement.md)
 
-Defined in: [factories/elementFactories.ts:128](https://github.com/instantish/blokus/blob/f10405c/src/factories/elementFactories.ts#L128)
+Defined in: [factories/elementFactories.ts:144](https://github.com/instantish/blokus/blob/8b8e846/src/factories/elementFactories.ts#L144)
 
 ___
 
@@ -492,6 +502,8 @@ ___
 ▸ `Const`**ConversationSelect**(`params`: *Pick*<[*ConversationSelectMenuElement*](interfaces/conversationselectmenuelement.md), *confirm* \| *actionId* \| *placeholder* \| *defaultToCurrentConversation* \| *filter* \| *initialConversation*\>): [*ConversationSelectMenuElement*](interfaces/conversationselectmenuelement.md)
 
 Generates a conversation select element from slack.
+
+**JSX tag**: <conversation-select>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/block-elements#conversation_select)
 
@@ -503,7 +515,7 @@ Name | Type | Description |
 
 **Returns:** [*ConversationSelectMenuElement*](interfaces/conversationselectmenuelement.md)
 
-Defined in: [factories/elementFactories.ts:233](https://github.com/instantish/blokus/blob/f10405c/src/factories/elementFactories.ts#L233)
+Defined in: [factories/elementFactories.ts:265](https://github.com/instantish/blokus/blob/8b8e846/src/factories/elementFactories.ts#L265)
 
 ___
 
@@ -512,6 +524,8 @@ ___
 ▸ `Const`**Datepicker**(`params`: *Pick*<[*DatepickerElement*](interfaces/datepickerelement.md), *confirm* \| *actionId* \| *placeholder* \| *initialDate*\>): [*DatepickerElement*](interfaces/datepickerelement.md)
 
 Generates a datepicker element from slack.
+
+**JSX tag**: <datepicker>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/block-elements#datepicker)
 
@@ -523,7 +537,7 @@ Name | Type | Description |
 
 **Returns:** [*DatepickerElement*](interfaces/datepickerelement.md)
 
-Defined in: [factories/elementFactories.ts:67](https://github.com/instantish/blokus/blob/f10405c/src/factories/elementFactories.ts#L67)
+Defined in: [factories/elementFactories.ts:73](https://github.com/instantish/blokus/blob/8b8e846/src/factories/elementFactories.ts#L73)
 
 ___
 
@@ -543,7 +557,7 @@ Name | Type | Description |
 
 **Returns:** [*DispatchActionConfigObject*](interfaces/dispatchactionconfigobject.md)
 
-Defined in: [factories/objectsFactories.ts:98](https://github.com/instantish/blokus/blob/f10405c/src/factories/objectsFactories.ts#L98)
+Defined in: [factories/objectsFactories.ts:95](https://github.com/instantish/blokus/blob/8b8e846/src/factories/objectsFactories.ts#L95)
 
 ___
 
@@ -552,6 +566,8 @@ ___
 ▸ `Const`**Divider**(`params`: *Pick*<[*DividerBlock*](interfaces/dividerblock.md), *blockId*\>): [*DividerBlock*](interfaces/dividerblock.md)
 
 Generates a divider block from slack.
+
+**JSX tag**: <divider>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/blocks#divider)
 
@@ -563,7 +579,7 @@ Name | Type | Description |
 
 **Returns:** [*DividerBlock*](interfaces/dividerblock.md)
 
-Defined in: [factories/presentationalFactories.ts:68](https://github.com/instantish/blokus/blob/f10405c/src/factories/presentationalFactories.ts#L68)
+Defined in: [factories/presentationalFactories.ts:74](https://github.com/instantish/blokus/blob/8b8e846/src/factories/presentationalFactories.ts#L74)
 
 ___
 
@@ -572,6 +588,8 @@ ___
 ▸ `Const`**ExternalMultiSelect**(`params`: *Pick*<[*ExternalMultiSelectMenuElement*](interfaces/externalmultiselectmenuelement.md), *confirm* \| *actionId* \| *initialOptions* \| *placeholder* \| *maxSelectedItems* \| *minQueryLength*\>): [*ExternalMultiSelectMenuElement*](interfaces/externalmultiselectmenuelement.md)
 
 Generates an external multi select element from slack.
+
+**JSX tag**: <external-multiselect>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/block-elements#external_multi_select)
 
@@ -583,7 +601,7 @@ Name | Type | Description |
 
 **Returns:** [*ExternalMultiSelectMenuElement*](interfaces/externalmultiselectmenuelement.md)
 
-Defined in: [factories/elementFactories.ts:106](https://github.com/instantish/blokus/blob/f10405c/src/factories/elementFactories.ts#L106)
+Defined in: [factories/elementFactories.ts:118](https://github.com/instantish/blokus/blob/8b8e846/src/factories/elementFactories.ts#L118)
 
 ___
 
@@ -592,6 +610,8 @@ ___
 ▸ `Const`**ExternalSelect**(`params`: *Pick*<[*ExternalSelectMenuElement*](interfaces/externalselectmenuelement.md), *confirm* \| *actionId* \| *placeholder* \| *minQueryLength* \| *initialOption*\>): [*ExternalSelectMenuElement*](interfaces/externalselectmenuelement.md)
 
 Generates an external select element from slack.
+
+**JSX tag**: <external-select>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/block-elements#external_select)
 
@@ -603,7 +623,7 @@ Name | Type | Description |
 
 **Returns:** [*ExternalSelectMenuElement*](interfaces/externalselectmenuelement.md)
 
-Defined in: [factories/elementFactories.ts:213](https://github.com/instantish/blokus/blob/f10405c/src/factories/elementFactories.ts#L213)
+Defined in: [factories/elementFactories.ts:241](https://github.com/instantish/blokus/blob/8b8e846/src/factories/elementFactories.ts#L241)
 
 ___
 
@@ -612,6 +632,8 @@ ___
 ▸ `Const`**File**(`params`: *Pick*<[*FileBlock*](interfaces/fileblock.md), *blockId* \| *externalId* \| *source*\>): [*FileBlock*](interfaces/fileblock.md)
 
 Generates a file block from slack.
+
+**JSX tag**: <file>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/blocks#file)
 
@@ -623,7 +645,7 @@ Name | Type | Description |
 
 **Returns:** [*FileBlock*](interfaces/fileblock.md)
 
-Defined in: [factories/presentationalFactories.ts:78](https://github.com/instantish/blokus/blob/f10405c/src/factories/presentationalFactories.ts#L78)
+Defined in: [factories/presentationalFactories.ts:86](https://github.com/instantish/blokus/blob/8b8e846/src/factories/presentationalFactories.ts#L86)
 
 ___
 
@@ -643,7 +665,7 @@ Name | Type | Description |
 
 **Returns:** [*FilterObject*](interfaces/filterobject.md)
 
-Defined in: [factories/objectsFactories.ts:108](https://github.com/instantish/blokus/blob/f10405c/src/factories/objectsFactories.ts#L108)
+Defined in: [factories/objectsFactories.ts:105](https://github.com/instantish/blokus/blob/8b8e846/src/factories/objectsFactories.ts#L105)
 
 ___
 
@@ -652,6 +674,8 @@ ___
 ▸ `Const`**Header**(`params`: [*PartialBy*](modules.md#partialby)<*Pick*<[*HeaderBlock*](interfaces/headerblock.md), *text* \| *blockId*\>, *text*\>, `text`: [*BlockOrGenerator*](modules.md#blockorgenerator)<*string* \| [*PlainTextObject*](interfaces/plaintextobject.md)\>): [*HeaderBlock*](interfaces/headerblock.md)
 
 Generates a header block from slack.
+
+**JSX tag**: <header>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/blocks#header)
 
@@ -664,7 +688,7 @@ Name | Type | Description |
 
 **Returns:** [*HeaderBlock*](interfaces/headerblock.md)
 
-Defined in: [factories/presentationalFactories.ts:90](https://github.com/instantish/blokus/blob/f10405c/src/factories/presentationalFactories.ts#L90)
+Defined in: [factories/presentationalFactories.ts:100](https://github.com/instantish/blokus/blob/8b8e846/src/factories/presentationalFactories.ts#L100)
 
 ___
 
@@ -673,6 +697,8 @@ ___
 ▸ `Const`**HomeTab**(`params`: [*PartialBy*](modules.md#partialby)<*Pick*<[*HomeTabView*](interfaces/hometabview.md), *externalId* \| *blocks* \| *privateMetadata* \| *callbackId*\>, *blocks*\>, ...`blocks`: [*BlocksOrGenerators*](modules.md#blocksorgenerators)<[*ViewBlocks*](modules.md#viewblocks)\> \| [*BlocksOrGenerators*](modules.md#blocksorgenerators)<[*ViewBlocks*](modules.md#viewblocks)\>[]): [*HomeTabView*](interfaces/hometabview.md)
 
 Generates a home view from slack.
+
+**JSX tag**: <home>
 
 **`see`** [Official documentation](https://api.slack.com/surfaces/tabs)
 
@@ -685,7 +711,7 @@ Name | Type | Description |
 
 **Returns:** [*HomeTabView*](interfaces/hometabview.md)
 
-Defined in: [factories/viewFactories.ts:35](https://github.com/instantish/blokus/blob/f10405c/src/factories/viewFactories.ts#L35)
+Defined in: [factories/viewFactories.ts:39](https://github.com/instantish/blokus/blob/8b8e846/src/factories/viewFactories.ts#L39)
 
 ___
 
@@ -694,6 +720,8 @@ ___
 ▸ `Const`**Image**(`params`: *Pick*<[*ImageBlock*](interfaces/imageblock.md), *imageUrl* \| *altText* \| *title* \| *blockId*\>): [*ImageBlock*](interfaces/imageblock.md)
 
 Generates an image block from slack.
+
+**JSX tag**: <image>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/blocks#image)
 
@@ -705,7 +733,7 @@ Name | Type | Description |
 
 **Returns:** [*ImageBlock*](interfaces/imageblock.md)
 
-Defined in: [factories/presentationalFactories.ts:104](https://github.com/instantish/blokus/blob/f10405c/src/factories/presentationalFactories.ts#L104)
+Defined in: [factories/presentationalFactories.ts:116](https://github.com/instantish/blokus/blob/8b8e846/src/factories/presentationalFactories.ts#L116)
 
 ___
 
@@ -714,6 +742,8 @@ ___
 ▸ `Const`**ImageElement**(`params`: *Pick*<[*ImageElementBlock*](interfaces/imageelementblock.md), *imageUrl* \| *altText*\>): [*ImageElementBlock*](interfaces/imageelementblock.md)
 
 Generates an image element from slack.
+
+**JSX tag**: <image-element>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/block-elements#image)
 
@@ -725,7 +755,7 @@ Name | Type | Description |
 
 **Returns:** [*ImageElementBlock*](interfaces/imageelementblock.md)
 
-Defined in: [factories/elementFactories.ts:77](https://github.com/instantish/blokus/blob/f10405c/src/factories/elementFactories.ts#L77)
+Defined in: [factories/elementFactories.ts:85](https://github.com/instantish/blokus/blob/8b8e846/src/factories/elementFactories.ts#L85)
 
 ___
 
@@ -734,6 +764,8 @@ ___
 ▸ `Const`**Input**(`params`: [*PartialBy*](modules.md#partialby)<*Pick*<[*InputBlock*](interfaces/inputblock.md), *label* \| *blockId* \| *element* \| *dispatchAction* \| *hint* \| *optional*\>, *element*\>, `element`: [*BlockOrGenerator*](modules.md#blockorgenerator)<[*FormElement*](modules.md#formelement)\>): [*InputBlock*](interfaces/inputblock.md)
 
 Generates an input block from slack.
+
+**JSX tag**: <input>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/blocks#input)
 
@@ -746,28 +778,7 @@ Name | Type | Description |
 
 **Returns:** [*InputBlock*](interfaces/inputblock.md)
 
-Defined in: [factories/presentationalFactories.ts:115](https://github.com/instantish/blokus/blob/f10405c/src/factories/presentationalFactories.ts#L115)
-
-___
-
-### Markdown
-
-▸ `Const`**Markdown**(`params`: [*PartialBy*](modules.md#partialby)<*Pick*<[*MarkdownTextObject*](interfaces/markdowntextobject.md), *text* \| *verbatim*\>, *text*\>, `text?`: *string*): [*MarkdownTextObject*](interfaces/markdowntextobject.md)
-
-Generates a text composition object from slack with the markdown type.
-
-**`see`** [Official documentation](https://api.slack.com/reference/block-kit/composition-objects#text)
-
-#### Parameters:
-
-Name | Type | Default value | Description |
------- | ------ | ------ | ------ |
-`params` | [*PartialBy*](modules.md#partialby)<*Pick*<[*MarkdownTextObject*](interfaces/markdowntextobject.md), *text* \| *verbatim*\>, *text*\> | - | The various properties available to this object.   |
-`text` | *string* | '' | The markdown text to add inside of this text object. Replaces the `text` property.   |
-
-**Returns:** [*MarkdownTextObject*](interfaces/markdowntextobject.md)
-
-Defined in: [factories/objectsFactories.ts:36](https://github.com/instantish/blokus/blob/f10405c/src/factories/objectsFactories.ts#L36)
+Defined in: [factories/presentationalFactories.ts:129](https://github.com/instantish/blokus/blob/8b8e846/src/factories/presentationalFactories.ts#L129)
 
 ___
 
@@ -776,6 +787,8 @@ ___
 ▸ `Const`**Message**(`params`: [*PartialBy*](modules.md#partialby)<*Pick*<[*MessageView*](interfaces/messageview.md), *text* \| *blocks* \| *threadTS* \| *mrkdwn*\>, *blocks*\>, ...`blocks`: [*BlocksOrGenerators*](modules.md#blocksorgenerators)<[*MessageBlock*](modules.md#messageblock)\> \| [*BlocksOrGenerators*](modules.md#blocksorgenerators)<[*MessageBlock*](modules.md#messageblock)\>[]): [*MessageView*](interfaces/messageview.md)
 
 Generates a message view from slack.
+
+**JSX tag**: <message>
 
 **`see`** [Official documentation](https://api.slack.com/surfaces/messages)
 
@@ -788,7 +801,7 @@ Name | Type | Description |
 
 **Returns:** [*MessageView*](interfaces/messageview.md)
 
-Defined in: [factories/viewFactories.ts:51](https://github.com/instantish/blokus/blob/f10405c/src/factories/viewFactories.ts#L51)
+Defined in: [factories/viewFactories.ts:57](https://github.com/instantish/blokus/blob/8b8e846/src/factories/viewFactories.ts#L57)
 
 ___
 
@@ -797,6 +810,8 @@ ___
 ▸ `Const`**Modal**(`params`: [*PartialBy*](modules.md#partialby)<*Pick*<[*ModalView*](interfaces/modalview.md), *title* \| *externalId* \| *blocks* \| *close* \| *submit* \| *privateMetadata* \| *callbackId* \| *clearOnClose* \| *notifyOnClose* \| *submitDisabled*\>, *blocks*\>, ...`blocks`: [*BlocksOrGenerators*](modules.md#blocksorgenerators)<[*ViewBlocks*](modules.md#viewblocks)\> \| [*BlocksOrGenerators*](modules.md#blocksorgenerators)<[*ViewBlocks*](modules.md#viewblocks)\>[]): [*ModalView*](interfaces/modalview.md)
 
 Generates a modal view from slack.
+
+**JSX tag**: <modal>
 
 **`see`** [Official documentation](https://api.slack.com/surfaces/modals)
 
@@ -809,13 +824,34 @@ Name | Type | Description |
 
 **Returns:** [*ModalView*](interfaces/modalview.md)
 
-Defined in: [factories/viewFactories.ts:19](https://github.com/instantish/blokus/blob/f10405c/src/factories/viewFactories.ts#L19)
+Defined in: [factories/viewFactories.ts:21](https://github.com/instantish/blokus/blob/8b8e846/src/factories/viewFactories.ts#L21)
+
+___
+
+### Mrkdwn
+
+▸ `Const`**Mrkdwn**(`params`: [*PartialBy*](modules.md#partialby)<*Pick*<[*MrkdwnTextObject*](interfaces/mrkdwntextobject.md), *text* \| *verbatim*\>, *text*\>, `text?`: *string*): [*MrkdwnTextObject*](interfaces/mrkdwntextobject.md)
+
+Generates a text composition object from slack with the markdown type.
+
+**`see`** [Official documentation](https://api.slack.com/reference/block-kit/composition-objects#text)
+
+#### Parameters:
+
+Name | Type | Default value | Description |
+------ | ------ | ------ | ------ |
+`params` | [*PartialBy*](modules.md#partialby)<*Pick*<[*MrkdwnTextObject*](interfaces/mrkdwntextobject.md), *text* \| *verbatim*\>, *text*\> | - | The various properties available to this object.   |
+`text` | *string* | '' | The markdown text to add inside of this text object. Replaces the `text` property.   |
+
+**Returns:** [*MrkdwnTextObject*](interfaces/mrkdwntextobject.md)
+
+Defined in: [factories/objectsFactories.ts:36](https://github.com/instantish/blokus/blob/8b8e846/src/factories/objectsFactories.ts#L36)
 
 ___
 
 ### Option
 
-▸ `Const`**Option**(`params`: [*PartialBy*](modules.md#partialby)<*Pick*<[*OptionObject*](interfaces/optionobject.md), *text* \| *url* \| *value* \| *description*\>, *text*\>, `text`: [*BlockOrGenerator*](modules.md#blockorgenerator)<*string* \| [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MarkdownTextObject*](interfaces/markdowntextobject.md)\>): [*OptionObject*](interfaces/optionobject.md)
+▸ `Const`**Option**(`params`: [*PartialBy*](modules.md#partialby)<*Pick*<[*OptionObject*](interfaces/optionobject.md), *text* \| *url* \| *value* \| *description*\>, *text*\>, `text`: [*BlockOrGenerator*](modules.md#blockorgenerator)<*string* \| [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MrkdwnTextObject*](interfaces/mrkdwntextobject.md)\>): [*OptionObject*](interfaces/optionobject.md)
 
 Generates an option composition object from slack.
 
@@ -826,11 +862,11 @@ Generates an option composition object from slack.
 Name | Type | Description |
 ------ | ------ | ------ |
 `params` | [*PartialBy*](modules.md#partialby)<*Pick*<[*OptionObject*](interfaces/optionobject.md), *text* \| *url* \| *value* \| *description*\>, *text*\> | The various properties available to this object.   |
-`text` | [*BlockOrGenerator*](modules.md#blockorgenerator)<*string* \| [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MarkdownTextObject*](interfaces/markdowntextobject.md)\> | The markdown text to add inside of this option object. Replaces the `text` property.   |
+`text` | [*BlockOrGenerator*](modules.md#blockorgenerator)<*string* \| [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MrkdwnTextObject*](interfaces/mrkdwntextobject.md)\> | The markdown text to add inside of this option object. Replaces the `text` property.   |
 
 **Returns:** [*OptionObject*](interfaces/optionobject.md)
 
-Defined in: [factories/objectsFactories.ts:68](https://github.com/instantish/blokus/blob/f10405c/src/factories/objectsFactories.ts#L68)
+Defined in: [factories/objectsFactories.ts:65](https://github.com/instantish/blokus/blob/8b8e846/src/factories/objectsFactories.ts#L65)
 
 ___
 
@@ -851,7 +887,7 @@ Name | Type | Description |
 
 **Returns:** [*OptionGroupObject*](interfaces/optiongroupobject.md)
 
-Defined in: [factories/objectsFactories.ts:84](https://github.com/instantish/blokus/blob/f10405c/src/factories/objectsFactories.ts#L84)
+Defined in: [factories/objectsFactories.ts:81](https://github.com/instantish/blokus/blob/8b8e846/src/factories/objectsFactories.ts#L81)
 
 ___
 
@@ -860,6 +896,8 @@ ___
 ▸ `Const`**OverflowMenu**(`params`: [*PartialBy*](modules.md#partialby)<*Pick*<[*OverflowMenuElement*](interfaces/overflowmenuelement.md), *confirm* \| *actionId* \| *options*\>, *options*\>, ...`options`: [*BlocksOrGenerators*](modules.md#blocksorgenerators)<[*OptionObject*](interfaces/optionobject.md)\> \| [*BlocksOrGenerators*](modules.md#blocksorgenerators)<[*OptionObject*](interfaces/optionobject.md)\>[]): [*OverflowMenuElement*](interfaces/overflowmenuelement.md)
 
 Generates an overflow menu element from slack.
+
+**JSX tag**: <overflow>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/block-elements#overflow)
 
@@ -872,7 +910,7 @@ Name | Type | Description |
 
 **Returns:** [*OverflowMenuElement*](interfaces/overflowmenuelement.md)
 
-Defined in: [factories/elementFactories.ts:154](https://github.com/instantish/blokus/blob/f10405c/src/factories/elementFactories.ts#L154)
+Defined in: [factories/elementFactories.ts:174](https://github.com/instantish/blokus/blob/8b8e846/src/factories/elementFactories.ts#L174)
 
 ___
 
@@ -881,6 +919,8 @@ ___
 ▸ `Const`**PlainTextInput**(`params`: *Pick*<[*PlainTextInputElement*](interfaces/plaintextinputelement.md), *actionId* \| *placeholder* \| *initialValue* \| *multiline* \| *minLength* \| *maxLength* \| *dispatchActionConfig*\>): [*PlainTextInputElement*](interfaces/plaintextinputelement.md)
 
 Generates a plain text input element from slack.
+
+**JSX tag**: <plain-text>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/block-elements#input)
 
@@ -892,7 +932,7 @@ Name | Type | Description |
 
 **Returns:** [*PlainTextInputElement*](interfaces/plaintextinputelement.md)
 
-Defined in: [factories/elementFactories.ts:168](https://github.com/instantish/blokus/blob/f10405c/src/factories/elementFactories.ts#L168)
+Defined in: [factories/elementFactories.ts:190](https://github.com/instantish/blokus/blob/8b8e846/src/factories/elementFactories.ts#L190)
 
 ___
 
@@ -901,6 +941,8 @@ ___
 ▸ `Const`**PublicChannelsMultiSelect**(`params`: *Pick*<[*PublicChannelsMultiSelectMenuElement*](interfaces/publicchannelsmultiselectmenuelement.md), *confirm* \| *actionId* \| *placeholder* \| *maxSelectedItems* \| *initialChannels*\>): [*PublicChannelsMultiSelectMenuElement*](interfaces/publicchannelsmultiselectmenuelement.md)
 
 Generates a public channels multi select element from slack.
+
+**JSX tag**: <channels-multiselect>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/block-elements#channel_multi_select)
 
@@ -912,7 +954,7 @@ Name | Type | Description |
 
 **Returns:** [*PublicChannelsMultiSelectMenuElement*](interfaces/publicchannelsmultiselectmenuelement.md)
 
-Defined in: [factories/elementFactories.ts:140](https://github.com/instantish/blokus/blob/f10405c/src/factories/elementFactories.ts#L140)
+Defined in: [factories/elementFactories.ts:158](https://github.com/instantish/blokus/blob/8b8e846/src/factories/elementFactories.ts#L158)
 
 ___
 
@@ -921,6 +963,8 @@ ___
 ▸ `Const`**PublicChannelsSelect**(`params`: *Pick*<[*PublicChannelsSelectMenuElement*](interfaces/publicchannelsselectmenuelement.md), *confirm* \| *actionId* \| *placeholder* \| *initialChannel*\>): [*PublicChannelsSelectMenuElement*](interfaces/publicchannelsselectmenuelement.md)
 
 Generates a public channels select element from slack.
+
+**JSX tag**: <channels-select>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/block-elements#channel_select)
 
@@ -932,7 +976,7 @@ Name | Type | Description |
 
 **Returns:** [*PublicChannelsSelectMenuElement*](interfaces/publicchannelsselectmenuelement.md)
 
-Defined in: [factories/elementFactories.ts:245](https://github.com/instantish/blokus/blob/f10405c/src/factories/elementFactories.ts#L245)
+Defined in: [factories/elementFactories.ts:280](https://github.com/instantish/blokus/blob/8b8e846/src/factories/elementFactories.ts#L280)
 
 ___
 
@@ -941,6 +985,8 @@ ___
 ▸ `Const`**RadioButtonGroup**(`params`: [*PartialBy*](modules.md#partialby)<*Pick*<[*RadioButtonGroupElement*](interfaces/radiobuttongroupelement.md), *confirm* \| *actionId* \| *options* \| *initialOption*\>, *options*\>, ...`options`: [*BlocksOrGenerators*](modules.md#blocksorgenerators)<[*OptionObject*](interfaces/optionobject.md)\> \| [*BlocksOrGenerators*](modules.md#blocksorgenerators)<[*OptionObject*](interfaces/optionobject.md)\>[]): [*RadioButtonGroupElement*](interfaces/radiobuttongroupelement.md)
 
 Generates an radio button group element from slack.
+
+**JSX tag**: <radio>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/block-elements#radio)
 
@@ -953,15 +999,17 @@ Name | Type | Description |
 
 **Returns:** [*RadioButtonGroupElement*](interfaces/radiobuttongroupelement.md)
 
-Defined in: [factories/elementFactories.ts:180](https://github.com/instantish/blokus/blob/f10405c/src/factories/elementFactories.ts#L180)
+Defined in: [factories/elementFactories.ts:204](https://github.com/instantish/blokus/blob/8b8e846/src/factories/elementFactories.ts#L204)
 
 ___
 
 ### Section
 
-▸ `Const`**Section**(`params`: [*PartialBy*](modules.md#partialby)<*Pick*<[*SectionBlock*](interfaces/sectionblock.md), *text* \| *blockId* \| *fields* \| *accessory*\>, *fields*\>, ...`fields`: [*BlocksOrGenerators*](modules.md#blocksorgenerators)<*string* \| [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MarkdownTextObject*](interfaces/markdowntextobject.md)\> \| [*BlocksOrGenerators*](modules.md#blocksorgenerators)<*string* \| [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MarkdownTextObject*](interfaces/markdowntextobject.md)\>[]): [*SectionBlock*](interfaces/sectionblock.md)
+▸ `Const`**Section**(`params`: [*PartialBy*](modules.md#partialby)<*Pick*<[*SectionBlock*](interfaces/sectionblock.md), *text* \| *blockId* \| *fields* \| *accessory*\>, *fields*\>, ...`fields`: [*BlocksOrGenerators*](modules.md#blocksorgenerators)<*string* \| [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MrkdwnTextObject*](interfaces/mrkdwntextobject.md)\> \| [*BlocksOrGenerators*](modules.md#blocksorgenerators)<*string* \| [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MrkdwnTextObject*](interfaces/mrkdwntextobject.md)\>[]): [*SectionBlock*](interfaces/sectionblock.md)
 
 Generates a section block from slack.
+
+**JSX tag**: <section>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/blocks#section)
 
@@ -970,11 +1018,11 @@ Generates a section block from slack.
 Name | Type | Description |
 ------ | ------ | ------ |
 `params` | [*PartialBy*](modules.md#partialby)<*Pick*<[*SectionBlock*](interfaces/sectionblock.md), *text* \| *blockId* \| *fields* \| *accessory*\>, *fields*\> | The various properties available to this block or element.   |
-`...fields` | [*BlocksOrGenerators*](modules.md#blocksorgenerators)<*string* \| [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MarkdownTextObject*](interfaces/markdowntextobject.md)\> \| [*BlocksOrGenerators*](modules.md#blocksorgenerators)<*string* \| [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MarkdownTextObject*](interfaces/markdowntextobject.md)\>[] | The fields to use for the block, sub-arrays will automatically be flattened. Will automatically convert strings to plain_text elements. Replaces the `fields` property.   |
+`...fields` | [*BlocksOrGenerators*](modules.md#blocksorgenerators)<*string* \| [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MrkdwnTextObject*](interfaces/mrkdwntextobject.md)\> \| [*BlocksOrGenerators*](modules.md#blocksorgenerators)<*string* \| [*PlainTextObject*](interfaces/plaintextobject.md) \| [*MrkdwnTextObject*](interfaces/mrkdwntextobject.md)\>[] | The fields to use for the block, sub-arrays will automatically be flattened. Will automatically convert strings to plain_text elements. Replaces the `fields` property.   |
 
 **Returns:** [*SectionBlock*](interfaces/sectionblock.md)
 
-Defined in: [factories/presentationalFactories.ts:132](https://github.com/instantish/blokus/blob/f10405c/src/factories/presentationalFactories.ts#L132)
+Defined in: [factories/presentationalFactories.ts:148](https://github.com/instantish/blokus/blob/8b8e846/src/factories/presentationalFactories.ts#L148)
 
 ___
 
@@ -983,6 +1031,8 @@ ___
 ▸ `Const`**StaticMultiSelect**(`params`: *Pick*<[*StaticMultiSelectMenuElement*](interfaces/staticmultiselectmenuelement.md), *confirm* \| *actionId* \| *options* \| *initialOptions* \| *placeholder* \| *optionGroups* \| *maxSelectedItems*\>, ...`options`: [*BlocksOrGenerators*](modules.md#blocksorgenerators)<[*OptionObject*](interfaces/optionobject.md) \| [*OptionGroupObject*](interfaces/optiongroupobject.md)\> \| [*BlocksOrGenerators*](modules.md#blocksorgenerators)<[*OptionObject*](interfaces/optionobject.md) \| [*OptionGroupObject*](interfaces/optiongroupobject.md)\>[]): [*StaticMultiSelectMenuElement*](interfaces/staticmultiselectmenuelement.md)
 
 Generates a static multi select element from slack.
+
+**JSX tag**: <multiselect>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/block-elements#static_multi_select)
 
@@ -995,7 +1045,7 @@ Name | Type | Description |
 
 **Returns:** [*StaticMultiSelectMenuElement*](interfaces/staticmultiselectmenuelement.md)
 
-Defined in: [factories/elementFactories.ts:90](https://github.com/instantish/blokus/blob/f10405c/src/factories/elementFactories.ts#L90)
+Defined in: [factories/elementFactories.ts:100](https://github.com/instantish/blokus/blob/8b8e846/src/factories/elementFactories.ts#L100)
 
 ___
 
@@ -1004,6 +1054,8 @@ ___
 ▸ `Const`**StaticSelect**(`params`: *Pick*<[*StaticSelectMenuElement*](interfaces/staticselectmenuelement.md), *confirm* \| *actionId* \| *options* \| *placeholder* \| *optionGroups* \| *initialOption*\>, ...`options`: [*BlocksOrGenerators*](modules.md#blocksorgenerators)<[*OptionObject*](interfaces/optionobject.md) \| [*OptionGroupObject*](interfaces/optiongroupobject.md)\> \| [*BlocksOrGenerators*](modules.md#blocksorgenerators)<[*OptionObject*](interfaces/optionobject.md) \| [*OptionGroupObject*](interfaces/optiongroupobject.md)\>[]): [*StaticSelectMenuElement*](interfaces/staticselectmenuelement.md)
 
 Generates a static select element from slack.
+
+**JSX tag**: <select>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/block-elements#static_select)
 
@@ -1016,7 +1068,7 @@ Name | Type | Description |
 
 **Returns:** [*StaticSelectMenuElement*](interfaces/staticselectmenuelement.md)
 
-Defined in: [factories/elementFactories.ts:197](https://github.com/instantish/blokus/blob/f10405c/src/factories/elementFactories.ts#L197)
+Defined in: [factories/elementFactories.ts:223](https://github.com/instantish/blokus/blob/8b8e846/src/factories/elementFactories.ts#L223)
 
 ___
 
@@ -1037,7 +1089,7 @@ Name | Type | Default value | Description |
 
 **Returns:** [*PlainTextObject*](interfaces/plaintextobject.md)
 
-Defined in: [factories/objectsFactories.ts:23](https://github.com/instantish/blokus/blob/f10405c/src/factories/objectsFactories.ts#L23)
+Defined in: [factories/objectsFactories.ts:23](https://github.com/instantish/blokus/blob/8b8e846/src/factories/objectsFactories.ts#L23)
 
 ___
 
@@ -1046,6 +1098,8 @@ ___
 ▸ `Const`**Timepicker**(`params`: *Pick*<[*TimepickerElement*](interfaces/timepickerelement.md), *confirm* \| *actionId* \| *placeholder* \| *initialTime*\>): [*TimepickerElement*](interfaces/timepickerelement.md)
 
 Generates a timepicker element from slack.
+
+**JSX tag**: <timepicker>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/block-elements#timepicker)
 
@@ -1057,7 +1111,7 @@ Name | Type | Description |
 
 **Returns:** [*TimepickerElement*](interfaces/timepickerelement.md)
 
-Defined in: [factories/elementFactories.ts:257](https://github.com/instantish/blokus/blob/f10405c/src/factories/elementFactories.ts#L257)
+Defined in: [factories/elementFactories.ts:294](https://github.com/instantish/blokus/blob/8b8e846/src/factories/elementFactories.ts#L294)
 
 ___
 
@@ -1066,6 +1120,8 @@ ___
 ▸ `Const`**UserMultiSelect**(`params`: *Pick*<[*UserMultiSelectMenuElement*](interfaces/usermultiselectmenuelement.md), *confirm* \| *actionId* \| *placeholder* \| *maxSelectedItems* \| *initialUsers*\>): [*UserMultiSelectMenuElement*](interfaces/usermultiselectmenuelement.md)
 
 Generates a user multi select element from slack.
+
+**JSX tag**: <user-multiselect>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/block-elements#users_multi_select)
 
@@ -1077,7 +1133,7 @@ Name | Type | Description |
 
 **Returns:** [*UserMultiSelectMenuElement*](interfaces/usermultiselectmenuelement.md)
 
-Defined in: [factories/elementFactories.ts:118](https://github.com/instantish/blokus/blob/f10405c/src/factories/elementFactories.ts#L118)
+Defined in: [factories/elementFactories.ts:132](https://github.com/instantish/blokus/blob/8b8e846/src/factories/elementFactories.ts#L132)
 
 ___
 
@@ -1086,6 +1142,8 @@ ___
 ▸ `Const`**UserSelect**(`params`: *Pick*<[*UserSelectMenuElement*](interfaces/userselectmenuelement.md), *confirm* \| *actionId* \| *placeholder* \| *initialUser*\>): [*UserSelectMenuElement*](interfaces/userselectmenuelement.md)
 
 Generates a user select element from slack.
+
+**JSX tag**: <user-select>
 
 **`see`** [Official documentation](https://api.slack.com/reference/block-kit/block-elements#users_select)
 
@@ -1097,7 +1155,7 @@ Name | Type | Description |
 
 **Returns:** [*UserSelectMenuElement*](interfaces/userselectmenuelement.md)
 
-Defined in: [factories/elementFactories.ts:223](https://github.com/instantish/blokus/blob/f10405c/src/factories/elementFactories.ts#L223)
+Defined in: [factories/elementFactories.ts:253](https://github.com/instantish/blokus/blob/8b8e846/src/factories/elementFactories.ts#L253)
 
 ___
 
@@ -1122,4 +1180,4 @@ Name | Type | Description |
 
 Returns the generated payload, validated.
 
-Defined in: [processor.ts:589](https://github.com/instantish/blokus/blob/f10405c/src/processor.ts#L589)
+Defined in: [processor.ts:589](https://github.com/instantish/blokus/blob/8b8e846/src/processor.ts#L589)

@@ -29,7 +29,7 @@ want a block with only an image in it, you're looking for the image block.
 
 A plain-text summary of the image. This should not contain any markup.
 
-Defined in: [types.ts:526](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L526)
+Defined in: [types.ts:530](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L530)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 The URL of the image to be displayed.
 
-Defined in: [types.ts:521](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L521)
+Defined in: [types.ts:525](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L525)
 
 ___
 
@@ -51,4 +51,4 @@ The type of element. In this case type is always image.
 
 Overrides: [Block](block.md).[type](block.md#type)
 
-Defined in: [types.ts:516](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L516)
+Defined in: [types.ts:520](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L520)

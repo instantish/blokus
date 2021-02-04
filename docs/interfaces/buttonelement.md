@@ -36,7 +36,7 @@ interaction payload to identify the source of the action. Should be unique
 among all other action_ids in the containing block. Maximum length for
 this field is 255 characters.
 
-Defined in: [types.ts:388](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L388)
+Defined in: [types.ts:392](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L392)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 A confirm object that defines an optional confirmation dialog after the
 button is clicked.
 
-Defined in: [types.ts:442](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L442)
+Defined in: [types.ts:446](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L446)
 
 ___
 
@@ -67,7 +67,7 @@ action is destructive. Use danger even more sparingly than primary.
 
 If you don't include this field, the default button style will be used.
 
-Defined in: [types.ts:436](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L436)
+Defined in: [types.ts:440](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L440)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 A text object that defines the button's text. Can only be of type:
 plain_text. Maximum length for the text in this field is 75 characters.
 
-Defined in: [types.ts:407](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L407)
+Defined in: [types.ts:411](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L411)
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 The type of element. In this case type is always button.
 
-Defined in: [types.ts:401](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L401)
+Defined in: [types.ts:405](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L405)
 
 ___
 
@@ -101,7 +101,7 @@ length for this field is 3000 characters. If you're using url, you'll
 still receive an interaction payload and will need to send an
 acknowledgement response.
 
-Defined in: [types.ts:415](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L415)
+Defined in: [types.ts:419](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L419)
 
 ___
 
@@ -112,4 +112,4 @@ ___
 The value to send along with the interaction payload. Maximum length
 for this field is 2000 characters.
 
-Defined in: [types.ts:421](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L421)
+Defined in: [types.ts:425](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L425)

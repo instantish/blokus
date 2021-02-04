@@ -1,281 +1,123 @@
-import {
-  Action,
-  Button,
-  CheckboxGroup,
-  Confirm,
-  Context,
-  ConversationMultiSelect,
-  ConversationSelect,
-  Datepicker,
-  DispatchActionConfig,
-  Divider,
-  ExternalMultiSelect,
-  ExternalSelect,
-  File,
-  Filter,
-  Header,
-  HomeTab,
-  Image,
-  ImageElement,
-  Input,
-  Mrkdwn,
-  Message,
-  Modal,
-  Option,
-  OptionGroup,
-  OverflowMenu,
-  PlainTextInput,
-  PublicChannelsMultiSelect,
-  PublicChannelsSelect,
-  RadioButtonGroup,
-  render,
-  Section,
-  StaticMultiSelect,
-  StaticSelect,
-  Text,
-  Timepicker,
-  UserMultiSelect,
-  UserSelect,
-} from '../index';
+/** @jsx b */
+import { b } from '../jsx';
+import { render, Modal, FunctionalComponent, PropsWithChildren } from '../index';
 
-describe('Rendering blocks', () => {
+describe('Rendering blocks with tsx', () => {
   const sample = 'test';
 
-  const sampleText = Text({}, sample);
-  const sampleConfirm = Confirm(
-    {
-      title: sampleText,
-      confirm: sampleText,
-      style: 'primary',
-      deny: sampleText,
-    },
-    sample
+  const sampleText = <text>{sample}</text>;
+  const sampleConfirm = (
+    <confirm title={sampleText} confirm={sampleText} style="primary" deny={sampleText}>
+      {sample}
+    </confirm>
   );
-  const sampleOption = Option(
-    {
-      value: sample,
-      url: sample,
-      description: sampleText,
-    },
-    sample
+  const sampleOption = (
+    <option value={sample} url={sample} description={sampleText}>
+      {sample}
+    </option>
   );
-  const sampleOptionGroup = OptionGroup(
-    {
-      label: sampleText,
-    },
-    sampleOption
-  );
-  const sampleFilter = Filter({
-    include: ['mpim'],
-    excludeExternalSharedChannels: true,
-    excludeBotUsers: true,
-  });
+  const sampleOptionGroup = <option-group label={sampleText}>{sampleOption}</option-group>;
+  const sampleFilter = <filter include={['mpim']} excludeBotUsers={true} excludeExternalSharedChannels={true} />;
 
   const blocks = [
-    Header(
-      {
-        blockId: sample,
-      },
-      sample
-    ),
-    Image({
-      title: sampleText,
-      imageUrl: sample,
-      altText: sample,
-      blockId: sample,
-    }),
-    Context(
-      {
-        blockId: sample,
-      },
-      [
-        Text({ emoji: sample }, sample),
-        Mrkdwn({ verbatim: sample }, sample),
-        ImageElement({ altText: sample, imageUrl: sample }),
-      ]
-    ),
-    Divider({ blockId: sample }),
-    Action(
-      {
-        blockId: sample,
-      },
-      [
-        Button(
-          {
-            actionId: sample,
-            value: sample,
-            url: sample,
-            style: 'primary',
-            confirm: sampleConfirm,
-          },
-          sample
-        ),
-        StaticSelect(
-          {
-            actionId: sample,
-            confirm: sampleConfirm,
-            placeholder: sampleText,
-            initialOption: sampleOption,
-          },
-          [sampleOptionGroup]
-        ),
-        ExternalSelect({
-          actionId: sample,
-          minQueryLength: 0,
-          initialOption: sampleOption,
-          confirm: sampleConfirm,
-          placeholder: sampleText,
-        }),
-        UserSelect({
-          actionId: sample,
-          initialUser: sample,
-          confirm: sampleConfirm,
-          placeholder: sampleText,
-        }),
-        ConversationSelect({
-          actionId: sample,
-          filter: sampleFilter,
-          initialConversation: sample,
-          defaultToCurrentConversation: true,
-          confirm: sampleConfirm,
-          placeholder: sampleText,
-        }),
-      ]
-    ),
-    Action(
-      {
-        blockId: sample,
-      },
-      [
-        PublicChannelsSelect({
-          actionId: sample,
-          initialChannel: sample,
-          confirm: sampleConfirm,
-          placeholder: sampleText,
-        }),
-        StaticMultiSelect(
-          {
-            actionId: sample,
-            confirm: sampleConfirm,
-            placeholder: sampleText,
-            initialOptions: [sampleOption],
-          },
-          [sampleOptionGroup]
-        ),
-        ExternalMultiSelect({
-          actionId: sample,
-          minQueryLength: 0,
-          initialOptions: [sampleOption],
-          confirm: sampleConfirm,
-          placeholder: sampleText,
-        }),
-        UserMultiSelect({
-          actionId: sample,
-          initialUsers: [sample],
-          confirm: sampleConfirm,
-          placeholder: sampleText,
-        }),
-        ConversationMultiSelect({
-          actionId: sample,
-          filter: sampleFilter,
-          initialConversations: [sample],
-          defaultToCurrentConversation: true,
-          confirm: sampleConfirm,
-          placeholder: sampleText,
-        }),
-      ]
-    ),
-    Action(
-      {
-        blockId: sample,
-      },
-      [
-        PublicChannelsMultiSelect({
-          actionId: sample,
-          initialChannels: [sample],
-          confirm: sampleConfirm,
-          placeholder: sampleText,
-        }),
-        OverflowMenu(
-          {
-            actionId: sample,
-            confirm: sampleConfirm,
-          },
-          sampleOption
-        ),
-        Datepicker({
-          actionId: sample,
-          initialDate: '00-00-0000',
-          confirm: sampleConfirm,
-          placeholder: sampleText,
-        }),
-      ]
-    ),
-    Section(
-      {
-        accessory: Timepicker({
-          actionId: sample,
-          initialTime: '00:00',
-          confirm: sampleConfirm,
-          placeholder: sampleText,
-        }),
-        text: sampleText,
-        blockId: sample,
-      },
-      [Mrkdwn({}, sample)]
-    ),
-    Input(
-      {
-        optional: false,
-        label: sampleText,
-        hint: sampleText,
-        dispatchAction: true,
-        blockId: sample,
-      },
-      PlainTextInput({
-        dispatchActionConfig: DispatchActionConfig({ triggerActionsOn: ['on_enter_pressed'] }),
-        multiline: true,
-        minLength: 0,
-        maxLength: 0,
-        initialValue: sample,
-        actionId: sample,
-        placeholder: sampleText,
-      })
-    ),
-    Input(
-      {
-        optional: false,
-        label: sampleText,
-        hint: sampleText,
-        dispatchAction: true,
-        blockId: sample,
-      },
-      CheckboxGroup(
-        {
-          actionId: sample,
-          initialOptions: [sampleOption],
-          confirm: sampleConfirm,
-        },
-        sampleOption
-      )
-    ),
-    Input(
-      {
-        optional: false,
-        label: sampleText,
-        hint: sampleText,
-        dispatchAction: true,
-        blockId: sample,
-      },
-      RadioButtonGroup(
-        {
-          actionId: sample,
-          initialOption: sampleOption,
-          confirm: sampleConfirm,
-        },
-        sampleOption
-      )
-    ),
+    <header blockId={sample}>{sample}</header>,
+    <image title={sampleText} imageUrl={sample} altText={sample} blockId={sample} />,
+    <context blockId={sample}>
+      <text emoji={sample}>{sample}</text>
+      <mrkdwn verbatim={sample}>{sample}</mrkdwn>
+      <image-element imageUrl={sample} altText={sample} />
+    </context>,
+    <divider blockId={sample} />,
+    <action blockId={sample}>
+      <button actionId={sample} value={sample} url={sample} style="primary" confirm={sampleConfirm}>
+        {sample}
+      </button>
+      <select actionId={sample} confirm={sampleConfirm} placeholder={sampleText} initialOption={sampleOption}>
+        {sampleOptionGroup}
+      </select>
+      <external-select
+        actionId={sample}
+        minQueryLength={0}
+        initialOption={sampleOption}
+        confirm={sampleConfirm}
+        placeholder={sampleText}
+      />
+      <users-select actionId={sample} initialUser={sample} confirm={sampleConfirm} placeholder={sampleText} />
+      <conversation-select
+        actionId={sample}
+        filter={sampleFilter}
+        initialConversation={sample}
+        defaultToCurrentConversation={true}
+        confirm={sampleConfirm}
+        placeholder={sampleText}
+      />
+    </action>,
+    <action blockId={sample}>
+      <channels-select actionId={sample} initialChannel={sample} confirm={sampleConfirm} placeholder={sampleText}>
+        {sample}
+      </channels-select>
+      <multiselect actionId={sample} confirm={sampleConfirm} placeholder={sampleText} initialOptions={[sampleOption]}>
+        {sampleOptionGroup}
+      </multiselect>
+      <external-multiselect
+        actionId={sample}
+        minQueryLength={0}
+        initialOptions={[sampleOption]}
+        confirm={sampleConfirm}
+        placeholder={sampleText}
+      />
+      <users-multiselect actionId={sample} initialUsers={[sample]} confirm={sampleConfirm} placeholder={sampleText} />
+      <conversation-multiselect
+        actionId={sample}
+        filter={sampleFilter}
+        initialConversations={[sample]}
+        defaultToCurrentConversation={true}
+        confirm={sampleConfirm}
+        placeholder={sampleText}
+      />
+    </action>,
+    <action blockId={sample}>
+      <channels-multiselect
+        actionId={sample}
+        initialChannels={[sample]}
+        confirm={sampleConfirm}
+        placeholder={sampleText}
+      >
+        {sample}
+      </channels-multiselect>
+      <overflow actionId={sample} confirm={sampleConfirm}>
+        {sampleOption}
+      </overflow>
+      <datepicker actionId={sample} initialDate="00-00-0000" confirm={sampleConfirm} placeholder={sampleText} />
+    </action>,
+    <section
+      accessory={<timepicker actionId={sample} initialTime="00:00" confirm={sampleConfirm} placeholder={sampleText} />}
+      text={sampleText}
+      blockId={sample}
+    >
+      <mrkdwn>{sample}</mrkdwn>
+    </section>,
+    <input optional={false} label={sampleText} hint={sampleText} dispatchAction={true} blockId={sample}>
+      <text-input
+        dispatchActionConfig={<dispatch-config triggerActionsOn={['on_enter_pressed']} />}
+        multiline={true}
+        minLength={0}
+        maxLength={0}
+        initialValue={sample}
+        actionId={sample}
+        placeholder={sampleText}
+      />
+    </input>,
+    <input optional={false} label={sampleText} hint={sampleText} dispatchAction={true} blockId={sample}>
+      <checkboxes actionId={sample} initialOptions={[sampleOption]} confirm={sampleConfirm}>
+        {sampleOption}
+      </checkboxes>
+    </input>,
+    <input optional={false} label={sampleText} hint={sampleText} dispatchAction={true} blockId={sample}>
+      <radio actionId={sample} initialOption={sampleOption} confirm={sampleConfirm}>
+        {sampleOption}
+      </radio>
+    </input>,
   ];
 
   const expectedBlocks = [
@@ -655,148 +497,121 @@ describe('Rendering blocks', () => {
     },
   ];
 
-  describe('Using the modal view', () => {
-    it('will render an empty modal if given no children', async () => {
-      const modalView = Modal({
-        callbackId: sample,
-        clearOnClose: true,
-        notifyOnClose: true,
-        privateMetadata: sample,
-        externalId: sample,
-        submitDisabled: false,
-        close: sampleText,
-        title: sampleText,
-        submit: sampleText,
-      });
+  it('will render a modal with jsx', async () => {
+    const modalView = (
+      <modal
+        callbackId={sample}
+        clearOnClose={true}
+        notifyOnClose={true}
+        privateMetadata={sample}
+        externalId={sample}
+        submitDisabled={false}
+        close={sampleText}
+        title={sampleText}
+        submit={sampleText}
+      >
+        {blocks}
+      </modal>
+    );
 
-      const result = await render(modalView);
+    const result = await render(modalView);
 
-      expect(result).toEqual({
-        type: 'modal',
-        title: {
-          type: 'plain_text',
-          text: sample,
-        },
-        blocks: [],
-        close: { type: 'plain_text', text: sample },
-        submit: { type: 'plain_text', text: sample },
-        private_metadata: sample,
-        callback_id: sample,
-        clear_on_close: true,
-        notify_on_close: true,
-        external_id: sample,
-        submit_disabled: false,
-      });
-    });
-
-    it('will render a modal with all the elements as expected', async () => {
-      const modalView = Modal(
-        {
-          callbackId: sample,
-          clearOnClose: true,
-          notifyOnClose: true,
-          privateMetadata: sample,
-          externalId: sample,
-          submitDisabled: false,
-          close: sampleText,
-          title: sampleText,
-          submit: sampleText,
-        },
-        blocks
-      );
-
-      const result = await render(modalView);
-
-      expect(result).toEqual({
-        type: 'modal',
-        title: { type: 'plain_text', text: sample },
-        blocks: expectedBlocks,
-        close: { type: 'plain_text', text: sample },
-        submit: { type: 'plain_text', text: sample },
-        private_metadata: sample,
-        callback_id: sample,
-        clear_on_close: true,
-        notify_on_close: true,
-        external_id: sample,
-        submit_disabled: false,
-      });
+    expect(result).toEqual({
+      type: 'modal',
+      title: { type: 'plain_text', text: sample },
+      blocks: expectedBlocks,
+      close: { type: 'plain_text', text: sample },
+      submit: { type: 'plain_text', text: sample },
+      private_metadata: sample,
+      callback_id: sample,
+      clear_on_close: true,
+      notify_on_close: true,
+      external_id: sample,
+      submit_disabled: false,
     });
   });
 
-  describe('Using the HomeTab view', () => {
-    it('will render an empty tab if given no children', async () => {
-      const homeView = HomeTab({
-        callbackId: sample,
-        privateMetadata: sample,
-        externalId: sample,
-      });
+  it('Will also work with passing the tag as a function', async () => {
+    const modalView = (
+      <Modal
+        callbackId={sample}
+        clearOnClose={true}
+        notifyOnClose={true}
+        privateMetadata={sample}
+        externalId={sample}
+        submitDisabled={false}
+        close={sampleText}
+        title={sampleText}
+        submit={sampleText}
+      />
+    );
 
-      const result = await render(homeView);
+    const result = await render(modalView);
 
-      expect(result).toEqual({
-        type: 'home',
-        blocks: [],
-        private_metadata: sample,
-        callback_id: sample,
-        external_id: sample,
-      });
-    });
-
-    it('will render a tab with all the elements as expected', async () => {
-      const homeView = HomeTab(
-        {
-          callbackId: sample,
-          privateMetadata: sample,
-          externalId: sample,
-        },
-        blocks
-      );
-
-      const result = await render(homeView);
-
-      expect(result).toEqual({
-        type: 'home',
-        blocks: expectedBlocks,
-        private_metadata: sample,
-        callback_id: sample,
-        external_id: sample,
-      });
+    expect(result).toEqual({
+      type: 'modal',
+      title: { type: 'plain_text', text: sample },
+      blocks: [],
+      close: { type: 'plain_text', text: sample },
+      submit: { type: 'plain_text', text: sample },
+      private_metadata: sample,
+      callback_id: sample,
+      clear_on_close: true,
+      notify_on_close: true,
+      external_id: sample,
+      submit_disabled: false,
     });
   });
 
-  describe('Using the Message view', () => {
-    it('will render an empty message if given no children', async () => {
-      const messageView = Message({
-        text: sample,
-      });
+  it('Will generate the components for the user', async () => {
+    const Component: FunctionalComponent<PropsWithChildren<{ message: string }>> = ({ message }) => (
+      <header>{message}</header>
+    );
 
-      const result = await render(messageView);
+    const modalView = (
+      <modal
+        callbackId={sample}
+        clearOnClose={true}
+        notifyOnClose={true}
+        privateMetadata={sample}
+        externalId={sample}
+        submitDisabled={false}
+        close={sampleText}
+        title={sampleText}
+        submit={sampleText}
+      >
+        <Component message={sample} />
+      </modal>
+    );
 
-      expect(result).toEqual({
-        text: sample,
-        blocks: [],
-      });
+    const result = await render(modalView);
+
+    expect(result).toEqual({
+      type: 'modal',
+      title: { type: 'plain_text', text: sample },
+      blocks: [{ type: 'header', text: { type: 'plain_text', text: sample } }],
+      close: { type: 'plain_text', text: sample },
+      submit: { type: 'plain_text', text: sample },
+      private_metadata: sample,
+      callback_id: sample,
+      clear_on_close: true,
+      notify_on_close: true,
+      external_id: sample,
+      submit_disabled: false,
     });
+  });
 
-    it('will render a message with a file element as expected', async () => {
-      const messageView = Message(
-        {
-          text: sample,
-        },
+  it('Will trigger an error when processing an unknown tag', () => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    expect(() => <test />).toThrowError(new Error('Invalid tag provided, test received.'));
+  });
 
-        File({
-          source: 'remote',
-          externalId: sample,
-          blockId: sample,
-        })
-      );
-
-      const result = await render(messageView);
-
-      expect(result).toEqual({
-        text: sample,
-        blocks: [{ type: 'file', block_id: sample, external_id: sample, source: 'remote' }],
-      });
-    });
+  it('Will trigger an error when processing an unknown type of tag', () => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    expect(() => b(0, null)).toThrowError(
+      new Error('Unknown tag type, be sure to pass only functions or string to the JSX factory. number received')
+    );
   });
 });

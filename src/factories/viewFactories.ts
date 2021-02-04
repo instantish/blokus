@@ -11,6 +11,8 @@ import { BlockTypes } from '../contants';
 
 /**
  * Generates a modal view from slack.
+ *
+ * **JSX tag**: <modal>
  * @param params  The various properties available to this view.
  * @param blocks  The blocks to use for the view, sub-arrays will automatically
  * be flattened. Replaces the `blocks` property.
@@ -27,6 +29,8 @@ export const Modal = (
 
 /**
  * Generates a home view from slack.
+ *
+ * **JSX tag**: <home>
  * @param params  The various properties available to this view.
  * @param blocks  The blocks to use for the view, sub-arrays will automatically
  * be flattened. Replaces the `blocks` property.
@@ -43,6 +47,8 @@ export const HomeTab = (
 
 /**
  * Generates a message view from slack.
+ *
+ * **JSX tag**: <message>
  * @param params  The various properties available to this view.
  * @param blocks  The blocks to use for the view, sub-arrays will automatically
  * be flattened. Replaces the `blocks` property.

@@ -30,7 +30,7 @@ Messages are one of the basic ingredients of Slack apps.
 
 An array of blocks that defines the content of the view. Max of 50 blocks.
 
-Defined in: [types.ts:1551](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1551)
+Defined in: [types.ts:1555](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1555)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 Determines whether the text field is rendered according to mrkdwn
 formatting or not. Defaults to true.
 
-Defined in: [types.ts:1562](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1562)
+Defined in: [types.ts:1566](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1566)
 
 ___
 
@@ -56,7 +56,7 @@ It can be formatted as plain text, or with mrkdwn. This field is not
 enforced as required when using blocks, however it is highly recommended
 that you include it as the aforementioned fallback.
 
-Defined in: [types.ts:1546](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1546)
+Defined in: [types.ts:1550](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1550)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 The ID of another un-threaded message to reply to.
 
-Defined in: [types.ts:1556](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1556)
+Defined in: [types.ts:1560](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1560)
 
 ___
 
@@ -78,4 +78,4 @@ The type of view. In this case type is always message.
 
 Overrides: [Block](block.md).[type](block.md#type)
 
-Defined in: [types.ts:1536](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1536)
+Defined in: [types.ts:1540](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1540)

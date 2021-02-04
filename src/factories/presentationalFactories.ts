@@ -21,6 +21,8 @@ import { Text } from './objectsFactories';
 
 /**
  * Generates an action block from slack.
+ *
+ * **JSX tag**: <action>
  * @param params  The various properties available to this block or element.
  * @param elements  The action elements to use for the element, sub-arrays will
  * automatically be flattened. Replaces the `elements` property.
@@ -37,6 +39,8 @@ export const Action = (
 
 /**
  * Generates a context block from slack.
+ *
+ * **JSX tag**: <context>
  * @param params  The various properties available to this block or element.
  * @param elements  The elements to use for the block, sub-arrays will automatically
  * be flattened. Will automatically convert strings to plain_text elements.
@@ -62,6 +66,8 @@ export const Context = (
 
 /**
  * Generates a divider block from slack.
+ *
+ * **JSX tag**: <divider>
  * @param params  The various properties available to this block or element.
  * @see {@link https://api.slack.com/reference/block-kit/blocks#divider|Official documentation}
  */
@@ -72,6 +78,8 @@ export const Divider = (params: Omit<DividerBlock, 'type'>): DividerBlock => ({
 
 /**
  * Generates a file block from slack.
+ *
+ * **JSX tag**: <file>
  * @param params  The various properties available to this block or element.
  * @see {@link https://api.slack.com/reference/block-kit/blocks#file|Official documentation}
  */
@@ -82,6 +90,8 @@ export const File = (params: Omit<FileBlock, 'type'>): FileBlock => ({
 
 /**
  * Generates a header block from slack.
+ *
+ * **JSX tag**: <header>
  * @param params  The various properties available to this block or element.
  * @param text  The text to add inside the block, strings will automatically
  * converted to plain_text blocks. Replaces the `text` property.
@@ -98,6 +108,8 @@ export const Header = (
 
 /**
  * Generates an image block from slack.
+ *
+ * **JSX tag**: <image>
  * @param params  The various properties available to this block or element.
  * @see {@link https://api.slack.com/reference/block-kit/blocks#image|Official documentation}
  */
@@ -108,6 +120,8 @@ export const Image = (params: Omit<ImageBlock, 'type'>): ImageBlock => ({
 
 /**
  * Generates an input block from slack.
+ *
+ * **JSX tag**: <input>
  * @param params  The various properties available to this block or element.
  * @param element  The form element to use for the block. Replaces the `element` property.
  * @see {@link https://api.slack.com/reference/block-kit/blocks#input|Official documentation}
@@ -123,6 +137,8 @@ export const Input = (
 
 /**
  * Generates a section block from slack.
+ *
+ * **JSX tag**: <section>
  * @param params  The various properties available to this block or element.
  * @param fields  The fields to use for the block, sub-arrays will automatically
  * be flattened. Will automatically convert strings to plain_text elements.

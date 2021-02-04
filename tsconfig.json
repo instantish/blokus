@@ -3,6 +3,7 @@
     "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
     "baseUrl": "./src",
+    "jsx": "react",
     "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -19,6 +20,6 @@
     "target": "ESNext",
     "types": ["node", "jest"]
   },
-  "include": ["packages/**/*", "**/*.spec.ts"],
+  "include": ["src/**/*", "**/*.spec.ts"],
   "exclude": ["node_modules", "dist"]
 }

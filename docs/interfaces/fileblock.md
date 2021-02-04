@@ -35,7 +35,7 @@ for this field is 255 characters. block_id should be unique for each
 message and each iteration of a message. If a message is updated, use a
 new block_id.
 
-Defined in: [types.ts:166](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L166)
+Defined in: [types.ts:170](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L170)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 The external unique ID for this file.
 
-Defined in: [types.ts:171](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L171)
+Defined in: [types.ts:175](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L175)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 At the moment, source will always be remote for a remote file.
 
-Defined in: [types.ts:176](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L176)
+Defined in: [types.ts:180](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L180)
 
 ___
 
@@ -67,4 +67,4 @@ The type of block. For a file block, type is always file.
 
 Overrides: [Block](block.md).[type](block.md#type)
 
-Defined in: [types.ts:156](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L156)
+Defined in: [types.ts:160](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L160)

@@ -35,7 +35,7 @@ A plain_text-only text object to define the text of the button that
 confirms the action. Maximum length for the text in this field is 30
 characters.
 
-Defined in: [types.ts:1258](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1258)
+Defined in: [types.ts:1262](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1262)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 A plain_text-only text object to define the text of the button that cancels
 the action. Maximum length for the text in this field is 30 characters.
 
-Defined in: [types.ts:1264](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1264)
+Defined in: [types.ts:1268](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1268)
 
 ___
 
@@ -60,7 +60,7 @@ mobile. A value of primary will display the button with a green background
 on desktop, or blue text on mobile. If this field is not provided, the
 default value will be primary.
 
-Defined in: [types.ts:1273](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1273)
+Defined in: [types.ts:1277](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1277)
 
 ___
 
@@ -72,7 +72,7 @@ A text object that defines the explanatory text that appears in the
 confirm dialog. Maximum length for the text in this field is 300
 characters.
 
-Defined in: [types.ts:1251](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1251)
+Defined in: [types.ts:1255](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1255)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 A plain_text-only text object that defines the dialog's title. Maximum
 length for this field is 100 characters.
 
-Defined in: [types.ts:1244](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1244)
+Defined in: [types.ts:1248](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1248)
 
 ___
 
@@ -97,4 +97,4 @@ Internal type property
 
 Overrides: [Block](block.md).[type](block.md#type)
 
-Defined in: [types.ts:1238](https://github.com/instantish/blokus/blob/f10405c/src/types.ts#L1238)
+Defined in: [types.ts:1242](https://github.com/instantish/blokus/blob/8b8e846/src/types.ts#L1242)
