@@ -267,7 +267,6 @@ export const ConversationSelect = (
 ): ConversationSelectMenuElement => ({
   type: BlockTypes.conversationsSelect,
   ...params,
-
 });
 
 /**
