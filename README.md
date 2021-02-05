@@ -1,4 +1,6 @@
 # Blokus
+[![codecov](https://codecov.io/gh/instantish/blokus/branch/main/graph/badge.svg?token=ZXbknhOSdM)](https://codecov.io/gh/instantish/blokus)
+
 Blokus is a JavaScript library for creating UIs in slack using the [BlockKit API](https://api.slack.com/block-kit) and
 the component pattern from modern UI libraries like React or Vue. Blokus was built in TypeScript and provides complete
 types for all it's exported members.
