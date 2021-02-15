@@ -28,7 +28,7 @@ jobs:
         env:
           GITHUB_BRANCH: ${{ env.GITHUB_REF_SLUG }}
           GITHUB_MAIN_BRANCH: 'main'
-          ACTIONS_RUNTIME_TOKEN: ${{ secrets.ACTIONS_RUNTIME_TOKEN }}
+          ACTIONS_RUNTIME_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: LouisBrunner/checks-action@v1.1.1
         name: "Complete status check"
         with:
