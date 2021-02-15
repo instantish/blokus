@@ -2,10 +2,16 @@ name: "Validate Type coverage"
 on: [push]
 
 jobs:
-  test_with_annotations_from_run:
+  test-coverage:
+    name: "Check TypeScript coverage"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: "Install dependencies"
+        run: npm install
       - name: Inject slug/short variables
         uses: rlespinasse/github-slug-action@v3.x
       - uses: LouisBrunner/checks-action@v1.1.1
