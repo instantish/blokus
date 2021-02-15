@@ -1,4 +1,6 @@
 # Blokus
+[![type-coverage](https://img.shields.io/badge/dynamic/json.svg?label=type-coverage&prefix=%E2%89%A5&suffix=%&query=$.typeCoverage.atLeast&uri=https%3A%2F%2Fraw.githubusercontent.com%2Finstantish%2Fblokus%2Fmaster%2Fpackage.json)](https://github.com/plantain-00/type-coverage)
+
 Blokus is a JavaScript library for creating UIs in slack using the [BlockKit API](https://api.slack.com/block-kit) and
 the component pattern from modern UI libraries like React or Vue. Blokus was built in TypeScript and provides complete
 types for all it's exported members.

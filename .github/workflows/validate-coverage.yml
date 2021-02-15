@@ -1,0 +1,31 @@
+name: "Validate Type coverage"
+on: [push]
+
+jobs:
+  test_with_annotations_from_run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: LouisBrunner/checks-action@v1.1.1
+        name: "Start status check"
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          name: TypeScript coverage reporter
+          status: in_progress
+          output: |
+            {"summary": "Waiting for the response from reporter"}
+      - id: coverage
+        name: "Run coverage reporter"
+        run: node ./scripts/checkCoverage.js
+        env:
+          GITHUB_BRANCH: ${{ secrets.GITHUB_REF##*/ }}
+          GITHUB_MAIN_BRANCH: 'main'
+      - name: "Update status check with the result"
+      - uses: ./
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          name: TypeScript coverage reporter
+          status: completed
+          conclusion: ${{ steps.coverage.outputs.status }}
+          output: |
+            {"summary":${{ steps.coverage.outputs.message }}}
