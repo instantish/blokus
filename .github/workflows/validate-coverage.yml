@@ -24,11 +24,12 @@ jobs:
             {"summary": "Waiting for the response from reporter"}
       - id: coverage
         name: "Run coverage reporter"
-        run: node ./scripts/checkCoverage.js
+        run: node ./checkCoverage.js
         env:
           GITHUB_BRANCH: ${{ env.GITHUB_REF_SLUG }}
           GITHUB_MAIN_BRANCH: 'main'
-          ACTIONS_RUNTIME_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          JSON_BIN_ID: ${{ secrets.JSON_BIN_ID }}
+          JSON_SECRET_KEY: ${{ secrets.JSON_SECRET_KEY }}
       - uses: LouisBrunner/checks-action@v1.1.1
         name: "Complete status check"
         with:

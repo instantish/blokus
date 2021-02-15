@@ -36,9 +36,7 @@
     "url": "https://github.com/instantish/blokus/issues"
   },
   "devDependencies": {
-    "@actions/artifact": "^0.5.0",
     "@actions/core": "^1.2.6",
-    "@actions/exec": "^1.0.4",
     "@babel/core": "^7.11.6",
     "@babel/plugin-transform-runtime": "^7.11.5",
     "@types/jest": "^26.0.14",
@@ -55,6 +53,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.1.0",
     "jest": "^26.5.2",
+    "node-fetch": "^2.6.1",
     "prettier": "^2.1.2",
     "ts-jest": "^26.4.1",
     "tsdx": "^0.14.1",
