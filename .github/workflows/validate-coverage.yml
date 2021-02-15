@@ -20,8 +20,8 @@ jobs:
         env:
           GITHUB_BRANCH: ${{ secrets.GITHUB_REF##*/ }}
           GITHUB_MAIN_BRANCH: 'main'
-      - name: "Update status check with the result"
-      - uses: ./
+      - uses: LouisBrunner/checks-action@v1.1.1
+        name: "Complete status check"
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           name: TypeScript coverage reporter
