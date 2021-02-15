@@ -23,7 +23,7 @@ const generateCoverage = async () => {
     uncovered: totalCount - correctCount,
   };
 
-  const result = await fetch(`https://api.jsonbin.io/b/${jsonBinId}`, {
+  const result = await fetch(`https://api.jsonbin.io/b/${jsonBinId}/latest`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
