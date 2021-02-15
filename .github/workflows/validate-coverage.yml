@@ -38,4 +38,4 @@ jobs:
           status: completed
           conclusion: ${{ steps.coverage.outputs.status }}
           output: |
-            {"summary":${{ steps.coverage.outputs.message }}}
+            {"summary":"${{ steps.coverage.outputs.message }}"}
