@@ -14,14 +14,6 @@ jobs:
         run: npm install
       - name: Inject slug/short variables
         uses: rlespinasse/github-slug-action@v3.x
-      - uses: LouisBrunner/checks-action@v1.1.1
-        name: "Start status check"
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          name: TypeScript coverage reporter
-          status: in_progress
-          output: |
-            {"summary": "Waiting for the response from reporter"}
       - id: coverage
         name: "Run coverage reporter"
         run: node ./checkCoverage.js
@@ -30,12 +22,4 @@ jobs:
           GITHUB_MAIN_BRANCH: 'main'
           JSON_BIN_ID: ${{ secrets.JSON_BIN_ID }}
           JSON_SECRET_KEY: ${{ secrets.JSON_SECRET_KEY }}
-      - uses: LouisBrunner/checks-action@v1.1.1
-        name: "Complete status check"
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          name: TypeScript coverage reporter
-          status: completed
-          conclusion: ${{ steps.coverage.outputs.status }}
-          output: |
-            {"summary":"${{ steps.coverage.outputs.message }}"}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
